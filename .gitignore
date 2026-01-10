@@ -1,0 +1,6 @@
+USAGE_GUIDE.md
+__pycache__
+.venv
+.idea
+.claude/
+CLAUDE.md
