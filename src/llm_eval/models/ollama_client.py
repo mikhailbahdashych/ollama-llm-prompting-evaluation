@@ -35,7 +35,7 @@ class OllamaClient:
         top_p: float = 0.9,
         max_tokens: int = 2048,
         stream: bool = False,
-        timeout: int = 300
+        timeout: int = 600
     ) -> Dict[str, Any]:
         """Generate text using an Ollama model.
 
@@ -46,7 +46,7 @@ class OllamaClient:
             top_p: Top-p sampling parameter (0.0-1.0)
             max_tokens: Maximum tokens to generate
             stream: Whether to stream the response (default: False)
-            timeout: Request timeout in seconds (default: 300)
+            timeout: Request timeout in seconds (default: 600)
 
         Returns:
             Dict containing:
@@ -64,18 +64,25 @@ class OllamaClient:
             requests.exceptions.RequestException: If the API call fails
             ValueError: If the response is invalid
         """
+        # Build options dict
+        options = {
+            "temperature": temperature,
+            "top_p": top_p
+        }
+
+        # Only add num_predict if it's not -1 (unlimited)
+        # For unlimited generation, we omit the parameter entirely
+        if max_tokens != -1:
+            options["num_predict"] = max_tokens
+
         payload = {
             "model": model,
             "prompt": prompt,
             "stream": stream,
-            "options": {
-                "temperature": temperature,
-                "top_p": top_p,
-                "num_predict": max_tokens
-            }
+            "options": options
         }
 
-        logger.info(f"Generating text with model: {model}")
+        logger.info(f"Generating text with model: {model} (max_tokens: {max_tokens})")
         logger.debug(f"Prompt length: {len(prompt)} characters")
 
         try:
@@ -90,6 +97,15 @@ class OllamaClient:
 
             if not result.get("done", False):
                 logger.warning("Generation may not be complete (done=False)")
+
+            # Check if response is empty
+            response_text = result.get("response", "")
+            if not response_text or response_text.strip() == "":
+                logger.warning(
+                    f"Empty response received from model {model}. "
+                    f"Generated {result.get('eval_count', 0)} tokens but response field is empty. "
+                    f"This may happen with reasoning models that hit token limits."
+                )
 
             logger.info(f"Generation complete. Tokens: {result.get('eval_count', 0)}")
             return result
