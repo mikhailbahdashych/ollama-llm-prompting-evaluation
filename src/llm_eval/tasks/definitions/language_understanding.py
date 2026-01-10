@@ -36,7 +36,5 @@ def create_language_understanding_task() -> Task:
             "disambiguation": 10,
             "nuance_recognition": 5,
             "explanation_clarity": 5
-        },
-        difficulty="medium",
-        notes="TODO: Fill in actual content later. Include ambiguous sentences or idioms."
+        }
     )

@@ -36,7 +36,5 @@ def create_instruction_following_task() -> Task:
             "instruction_adherence": 10,
             "completeness": 5,
             "format_compliance": 5
-        },
-        difficulty="medium",
-        notes="TODO: Fill in actual content later. This task should test IFEval-style instruction following."
+        }
     )

@@ -36,7 +36,5 @@ def create_logical_reasoning_task() -> Task:
             "logical_validity": 10,
             "completeness": 5,
             "clarity": 5
-        },
-        difficulty="medium",
-        notes="TODO: Fill in actual content later. Include syllogisms or logical puzzles."
+        }
     )

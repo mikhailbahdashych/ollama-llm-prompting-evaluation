@@ -38,7 +38,5 @@ def create_math_solving_task() -> Task:
             "methodology": 5,
             "step_clarity": 3,
             "explanation": 2
-        },
-        difficulty="medium",
-        notes="TODO: Fill in actual content later. Include algebra, geometry, or word problems."
+        }
     )

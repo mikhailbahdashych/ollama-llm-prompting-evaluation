@@ -43,8 +43,6 @@ class Task:
         development_examples: List of examples for few-shot prompting (2-3 recommended)
         evaluation_criteria: Dict of criterion_name -> description
         scoring_rubric: Dict of aspect -> maximum_points
-        difficulty: Task difficulty level (easy, medium, hard)
-        notes: Additional notes or TODOs for the task
     """
     id: str
     name: str
@@ -55,8 +53,6 @@ class Task:
     development_examples: List[TaskExample] = field(default_factory=list)
     evaluation_criteria: Dict[str, str] = field(default_factory=dict)
     scoring_rubric: Dict[str, int] = field(default_factory=dict)
-    difficulty: str = "medium"
-    notes: str = ""
 
     def to_dict(self) -> Dict:
         """Convert to dictionary for serialization."""
@@ -69,9 +65,7 @@ class Task:
             "expected_output_characteristics": self.expected_output_characteristics,
             "development_examples": [ex.to_dict() for ex in self.development_examples],
             "evaluation_criteria": self.evaluation_criteria,
-            "scoring_rubric": self.scoring_rubric,
-            "difficulty": self.difficulty,
-            "notes": self.notes
+            "scoring_rubric": self.scoring_rubric
         }
 
     def get_max_score(self) -> int:
@@ -83,8 +77,7 @@ class Task:
         fields_to_check = [
             self.description,
             self.evaluation_input,
-            self.expected_output_characteristics,
-            self.notes
+            self.expected_output_characteristics
         ]
         return not any("[TODO" in str(field) for field in fields_to_check)
 

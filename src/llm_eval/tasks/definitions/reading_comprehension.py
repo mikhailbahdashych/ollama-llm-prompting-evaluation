@@ -38,7 +38,5 @@ def create_reading_comprehension_task() -> Task:
             "completeness": 5,
             "evidence_based": 3,
             "clarity": 2
-        },
-        difficulty="medium",
-        notes="TODO: Fill in actual content later. Include a text passage and comprehension question."
+        }
     )

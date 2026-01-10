@@ -38,7 +38,5 @@ def create_code_generation_task() -> Task:
             "code_quality": 5,
             "efficiency": 3,
             "documentation": 2
-        },
-        difficulty="medium",
-        notes="TODO: Fill in actual content later. Use Python or another common language."
+        }
     )

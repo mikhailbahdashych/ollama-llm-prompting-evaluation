@@ -38,7 +38,5 @@ def create_factual_knowledge_task() -> Task:
             "completeness": 5,
             "specificity": 3,
             "source_reliability": 2
-        },
-        difficulty="medium",
-        notes="TODO: Fill in actual content later. Use verifiable factual questions."
+        }
     )

@@ -119,7 +119,6 @@ def list_tasks(registry: TaskRegistry):
     table.add_column("ID", style="cyan")
     table.add_column("Name", style="green")
     table.add_column("Category", style="magenta")
-    table.add_column("Difficulty", style="yellow")
     table.add_column("Complete", style="bold")
 
     for task in registry.get_all_tasks():
@@ -129,7 +128,6 @@ def list_tasks(registry: TaskRegistry):
             task.id,
             task.name,
             task.category,
-            task.difficulty,
             f"[{complete_style}]{complete}[/{complete_style}]"
         )
 

@@ -38,7 +38,5 @@ def create_creative_writing_task() -> Task:
             "coherence": 5,
             "engagement": 5,
             "language_quality": 5
-        },
-        difficulty="medium",
-        notes="TODO: Fill in actual content later. Could be story, poem, or descriptive passage."
+        }
     )

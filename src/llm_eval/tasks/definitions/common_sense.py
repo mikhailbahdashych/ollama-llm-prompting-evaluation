@@ -36,7 +36,5 @@ def create_common_sense_task() -> Task:
             "practical_reasoning": 10,
             "plausibility": 5,
             "explanation_quality": 5
-        },
-        difficulty="medium",
-        notes="TODO: Fill in actual content later. Use everyday scenarios and practical questions."
+        }
     )

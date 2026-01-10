@@ -38,7 +38,5 @@ def create_ethical_reasoning_task() -> Task:
             "balanced_analysis": 5,
             "nuanced_reasoning": 5,
             "thoughtfulness": 5
-        },
-        difficulty="hard",
-        notes="TODO: Fill in actual content later. Use real-world ethical dilemmas."
+        }
     )
