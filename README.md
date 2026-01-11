@@ -57,8 +57,7 @@ src/llm_eval/
 │   ├── registry.py    # Task loading and management
 │   └── definitions/   # Individual task implementations
 ├── prompts/           # Prompting strategy implementations
-│   ├── strategies.py  # ZeroShot, FewShot, ChainOfThought classes
-│   └── builders.py    # Prompt formatting utilities
+│   └── strategies.py  # ZeroShot, FewShot, ChainOfThought classes
 ├── models/            # Model configurations and API client
 │   ├── config.py      # Model definitions and parameters
 │   └── ollama_client.py  # Ollama HTTP API integration
