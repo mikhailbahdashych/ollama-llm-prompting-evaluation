@@ -122,8 +122,8 @@ def list_tasks(registry: TaskRegistry):
     table.add_column("Complete", style="bold")
 
     for task in registry.get_all_tasks():
-        complete = "Yes" if task.is_complete() else "No"
-        complete_style = "green" if task.is_complete() else "red"
+        complete = "Yes" if task.is_complete else "No"
+        complete_style = "green" if task.is_complete else "red"
         table.add_row(
             task.id,
             task.name,
@@ -166,26 +166,38 @@ def list_models():
 
 
 def validate_tasks(registry: TaskRegistry):
-    """Validate all task definitions and show status."""
+    """Validate all task definitions and show completion status."""
     from rich.table import Table
 
-    validation = registry.validate_tasks()
+    all_tasks = registry.get_all_tasks()
+    completion_status = registry.get_completion_status()
 
-    if not validation:
-        console.print("[bold green]All tasks are complete![/bold green]\n")
-        return
-
-    console.print("[bold yellow]Incomplete task fields:[/bold yellow]\n")
-
-    table = Table(title="Task Validation Report")
+    table = Table(title="Task Completion Status")
     table.add_column("Task ID", style="cyan")
-    table.add_column("Incomplete Fields", style="red")
+    table.add_column("Name", style="green")
+    table.add_column("Status", style="bold")
 
-    for task_id, fields in validation.items():
-        table.add_row(task_id, ", ".join(fields))
+    for task in all_tasks:
+        status = "Complete" if task.is_complete else "Incomplete"
+        status_style = "green" if task.is_complete else "red"
+        table.add_row(
+            task.id,
+            task.name,
+            f"[{status_style}]{status}[/{status_style}]"
+        )
 
     console.print(table)
-    console.print(f"\nTasks needing completion: {len(validation)}\n")
+    console.print(f"\nTotal tasks: {len(all_tasks)}")
+    console.print(f"Complete: {registry.count_complete_tasks()}")
+    console.print(f"Incomplete: {registry.count_incomplete_tasks()}")
+
+    if registry.count_incomplete_tasks() == 0:
+        console.print("\n[bold green]All tasks are complete![/bold green]\n")
+    else:
+        console.print(
+            f"\n[bold yellow]Note:[/bold yellow] Incomplete tasks will be skipped "
+            "during evaluation runs.\n"
+        )
 
 
 def main():

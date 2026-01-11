@@ -82,5 +82,6 @@ Write the complete function with appropriate documentation.""",
             "code_quality": 5,
             "efficiency": 3,
             "documentation": 2
-        }
+        },
+        is_complete=True
     )

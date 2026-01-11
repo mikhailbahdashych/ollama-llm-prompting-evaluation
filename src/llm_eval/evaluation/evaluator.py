@@ -100,8 +100,15 @@ class Evaluator:
             List of evaluation configurations
         """
         evaluations = []
+        skipped_tasks = []
 
         for task in tasks:
+            # Skip incomplete tasks
+            if not task.is_complete:
+                skipped_tasks.append(task.id)
+                logger.info(f"Skipping incomplete task: {task.id}")
+                continue
+
             for model in models:
                 # Get supported strategies for this model
                 for strategy_name in model.supported_strategies:
@@ -110,6 +117,13 @@ class Evaluator:
                         "model": model,
                         "strategy": strategy_name
                     })
+
+        # Log skipped tasks if any
+        if skipped_tasks:
+            console.print(
+                f"[yellow]Note:[/yellow] Skipping {len(skipped_tasks)} incomplete task(s): "
+                f"{', '.join(skipped_tasks)}\n"
+            )
 
         return evaluations
 

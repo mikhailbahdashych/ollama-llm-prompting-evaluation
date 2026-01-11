@@ -99,21 +99,29 @@ class TaskRegistry:
         """
         return list(self._tasks.keys())
 
+    def get_complete_tasks(self) -> List[Task]:
+        """Get only tasks that are marked as complete.
+
+        Returns:
+            List of complete Task objects
+        """
+        return [task for task in self._tasks.values() if task.is_complete]
+
     def count_complete_tasks(self) -> int:
-        """Count tasks that are complete (no TODO markers).
+        """Count tasks that are complete.
 
         Returns:
             Number of complete tasks
         """
-        return sum(1 for task in self._tasks.values() if task.is_complete())
+        return sum(1 for task in self._tasks.values() if task.is_complete)
 
     def count_incomplete_tasks(self) -> int:
-        """Count tasks that still have TODO markers.
+        """Count tasks that are incomplete.
 
         Returns:
             Number of incomplete tasks
         """
-        return sum(1 for task in self._tasks.values() if not task.is_complete())
+        return sum(1 for task in self._tasks.values() if not task.is_complete)
 
     def get_completion_status(self) -> Dict[str, bool]:
         """Get completion status for all tasks.
@@ -121,17 +129,4 @@ class TaskRegistry:
         Returns:
             Dict mapping task_id to completion status (True if complete)
         """
-        return {task_id: task.is_complete() for task_id, task in self._tasks.items()}
-
-    def validate_tasks(self) -> Dict[str, List[str]]:
-        """Validate all tasks and report incomplete fields.
-
-        Returns:
-            Dict mapping task_id to list of incomplete field names
-        """
-        validation_report = {}
-        for task_id, task in self._tasks.items():
-            incomplete_fields = task.get_incomplete_fields()
-            if incomplete_fields:
-                validation_report[task_id] = incomplete_fields
-        return validation_report
+        return {task_id: task.is_complete for task_id, task in self._tasks.items()}

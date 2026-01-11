@@ -30,8 +30,7 @@ class TaskExample:
 class Task:
     """Base task definition.
 
-    This class defines the structure for evaluation tasks. Tasks with [TODO: ...]
-    markers should be filled in later with actual task content.
+    This class defines the structure for evaluation tasks.
 
     Attributes:
         id: Unique identifier for the task (e.g., "logical_reasoning")
@@ -43,6 +42,7 @@ class Task:
         development_examples: List of examples for few-shot prompting (2-3 recommended)
         evaluation_criteria: Dict of criterion_name -> description
         scoring_rubric: Dict of aspect -> maximum_points
+        is_complete: Whether the task is fully implemented and ready for evaluation
     """
     id: str
     name: str
@@ -53,6 +53,7 @@ class Task:
     development_examples: List[TaskExample] = field(default_factory=list)
     evaluation_criteria: Dict[str, str] = field(default_factory=dict)
     scoring_rubric: Dict[str, int] = field(default_factory=dict)
+    is_complete: bool = False
 
     def to_dict(self) -> Dict:
         """Convert to dictionary for serialization."""
@@ -65,31 +66,10 @@ class Task:
             "expected_output_characteristics": self.expected_output_characteristics,
             "development_examples": [ex.to_dict() for ex in self.development_examples],
             "evaluation_criteria": self.evaluation_criteria,
-            "scoring_rubric": self.scoring_rubric
+            "scoring_rubric": self.scoring_rubric,
+            "is_complete": self.is_complete
         }
 
     def get_max_score(self) -> int:
         """Calculate the maximum possible score for this task."""
         return sum(self.scoring_rubric.values())
-
-    def is_complete(self) -> bool:
-        """Check if task definition is complete (no TODO markers)."""
-        fields_to_check = [
-            self.description,
-            self.evaluation_input,
-            self.expected_output_characteristics
-        ]
-        return not any("[TODO" in str(field) for field in fields_to_check)
-
-    def get_incomplete_fields(self) -> List[str]:
-        """Return list of field names that still have TODO markers."""
-        incomplete = []
-        if "[TODO" in self.description:
-            incomplete.append("description")
-        if "[TODO" in self.evaluation_input:
-            incomplete.append("evaluation_input")
-        if "[TODO" in self.expected_output_characteristics:
-            incomplete.append("expected_output_characteristics")
-        if any("[TODO" in ex.input or "[TODO" in ex.output for ex in self.development_examples):
-            incomplete.append("development_examples")
-        return incomplete
