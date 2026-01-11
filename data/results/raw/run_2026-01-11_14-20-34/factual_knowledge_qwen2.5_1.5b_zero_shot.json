@@ -1,0 +1,35 @@
+{
+  "task_id": "factual_knowledge",
+  "model_name": "qwen2.5:1.5b",
+  "strategy": "zero_shot",
+  "prompt": "This task evaluates the model's ability to accurately recall factual information, provide specific and verifiable details, and demonstrate knowledge across different domains while distinguishing between certainty and uncertainty.\n\nAnswer the following factual questions with accurate, specific information. If you are uncertain about any part of an answer, indicate this.\n\n1. What is the speed of light in a vacuum, and why is this value significant in physics? Provide the value with appropriate units.\n\n2. Who wrote the novel \"One Hundred Years of Solitude,\" and in what year was it originally published? What literary movement is this author associated with?\n\n3. What is photosynthesis, and what are the main inputs and outputs of this process? Include the basic chemical equation if possible.\n\n4. Name three countries that share a border with Germany and provide their capital cities.\n\nProvide accurate, specific factual information for each question.",
+  "response": "1. The speed of light in a vacuum is approximately 299,792 kilometers per second (km/s) or about 670,616,629 miles per hour mph). This value is significant in physics because it sets the foundation for understanding many phenomena involving electromagnetic radiation and time dilation effects near massive objects.\n\n2. Gabriel Garc\u00eda M\u00e1rquez wrote \"One Hundred Years of Solitude.\" The novel was first published in 1967. Gabriel Garc\u00eda M\u00e1rquez is associated with the Latin American magical realism literary movement, which blends elements of fantasy and magic into realistic narratives.\n\n3. Photosynthesis is a process used by plants to convert light energy from the sun into chemical energy stored within glucose (a type of sugar). The main inputs are carbon dioxide (CO2), water (H2O), and sunlight. The outputs include oxygen (O2) and glucose (C6H12O6).\n\nThe basic chemical equation for photosynthesis can be written as:\n\\[ 6CO_2 + 6H_2O + light \\rightarrow C_6H_{12}O_6 + 6O_2 \\]\n\n4. Three countries that share a border with Germany are Austria, Poland, and the Czech Republic. Their capital cities are Vienna (Austria), Warsaw (Poland), and Prague (Czech Republic).",
+  "timestamp": "2026-01-11T14:44:28.558044",
+  "model_config": {
+    "name": "qwen2.5:1.5b",
+    "display_name": "Qwen 2.5 (1.5B)",
+    "size_category": "small",
+    "is_reasoning_model": false,
+    "parameters": "1.5B",
+    "supported_strategies": [
+      "zero_shot",
+      "few_shot",
+      "chain_of_thought"
+    ],
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 4096,
+    "additional_params": {}
+  },
+  "generation_time_ms": 4944,
+  "prompt_tokens": 201,
+  "completion_tokens": 283,
+  "scores": {
+    "accuracy": 9,
+    "completeness": 5,
+    "specificity": 3,
+    "source_reliability": 1
+  },
+  "total_score": 18,
+  "evaluator_notes": null
+}

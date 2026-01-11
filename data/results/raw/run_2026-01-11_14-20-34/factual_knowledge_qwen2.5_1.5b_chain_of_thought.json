@@ -1,0 +1,35 @@
+{
+  "task_id": "factual_knowledge",
+  "model_name": "qwen2.5:1.5b",
+  "strategy": "chain_of_thought",
+  "prompt": "This task evaluates the model's ability to accurately recall factual information, provide specific and verifiable details, and demonstrate knowledge across different domains while distinguishing between certainty and uncertainty.\n\nAnswer the following factual questions with accurate, specific information. If you are uncertain about any part of an answer, indicate this.\n\n1. What is the speed of light in a vacuum, and why is this value significant in physics? Provide the value with appropriate units.\n\n2. Who wrote the novel \"One Hundred Years of Solitude,\" and in what year was it originally published? What literary movement is this author associated with?\n\n3. What is photosynthesis, and what are the main inputs and outputs of this process? Include the basic chemical equation if possible.\n\n4. Name three countries that share a border with Germany and provide their capital cities.\n\nProvide accurate, specific factual information for each question.\n\nLet's approach this step by step:\n1. First, analyze the problem carefully\n2. Then, work through it systematically\n3. Finally, provide your answer\n\nPlease show your reasoning at each step.",
+  "response": "Sure, let's address each question one by one:\n\n### 1. What is the speed of light in a vacuum, and why is this value significant in physics? Provide the value with appropriate units.\n\n**Step-by-Step Answer:**\n\n1. **Identify Key Information:**\n   - The speed of light in a vacuum is approximately \\( 299,792,458 \\) meters per second (m/s).\n\n2. **Understand Why This Value Is Significant:**\n   - The speed of light is crucial for understanding fundamental principles like electromagnetism and time dilation.\n   - It serves as the reference point for measuring other velocities in physics.\n\n3. **Provide Units:**\n   - Speed can be expressed with appropriate units, such as meters per second (m/s).\n\n**Final Answer:**\n\nThe speed of light in a vacuum is approximately \\( 299,792,458 \\) m/s.\n\n### 2. Who wrote the novel \"One Hundred Years of Solitude,\" and in what year was it originally published? What literary movement is this author associated with?\n\n**Step-by-Step Answer:**\n\n1. **Identify Key Information:**\n   - The author of \"One Hundred Years of Solitude\" is Gabriel Garc\u00eda M\u00e1rquez.\n   - It was first published in 1967.\n\n2. **Literary Movement:**\n   - This author is associated with the Latin American Boom, a literary movement that emerged in South America during the mid-20th century.\n\n3. **Provide Year of Publication:**\n   - The novel \"One Hundred Years of Solitude\" was originally published in 1967.\n\n**Final Answer:**\n\n- Gabriel Garc\u00eda M\u00e1rquez wrote \"One Hundred Years of Solitude.\"\n- It was first published in 1967.\n- This author is associated with the Latin American Boom literary movement.",
+  "timestamp": "2026-01-11T14:44:40.181449",
+  "model_config": {
+    "name": "qwen2.5:1.5b",
+    "display_name": "Qwen 2.5 (1.5B)",
+    "size_category": "small",
+    "is_reasoning_model": false,
+    "parameters": "1.5B",
+    "supported_strategies": [
+      "zero_shot",
+      "few_shot",
+      "chain_of_thought"
+    ],
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 4096,
+    "additional_params": {}
+  },
+  "generation_time_ms": 6481,
+  "prompt_tokens": 243,
+  "completion_tokens": 395,
+  "scores": {
+    "accuracy": 5,
+    "completeness": 2,
+    "specificity": 2,
+    "source_reliability": 1
+  },
+  "total_score": 10,
+  "evaluator_notes": null
+}

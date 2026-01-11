@@ -1,0 +1,34 @@
+{
+  "task_id": "instruction_following",
+  "model_name": "qwen2.5:1.5b",
+  "strategy": "zero_shot",
+  "prompt": "This task evaluates the model's ability to carefully follow multiple specific instructions and constraints while completing a task. It tests attention to detail and instruction adherence.\n\nWrite a brief description of a smartphone for a product catalog. Your description must follow ALL of these constraints:\n\n1. The description must be EXACTLY 4 sentences long (no more, no less)\n2. The first sentence must start with the word \"Introducing\"\n3. You must mention exactly THREE features (battery, camera, display)\n4. Do NOT use the words \"amazing\", \"incredible\", or \"revolutionary\"\n5. End the description with a question\n6. Use at least one comparison (e.g., \"faster than\", \"brighter than\")\n\nWrite the product description now.",
+  "response": "Introducing the new iPhone 13 Pro, featuring a stunning Ceramic Shield front cover and an advanced A15 Bionic chip that's faster than ever before. With a powerful dual-camera system including a 12MP ultra-wide lens for capturing every detail, and a Liquid Retina XDR display delivering better brightness and contrast than ever before, this smartphone is designed to handle any challenge with ease. Dive into the future of mobile technology today with the iPhone 13 Pro! What do you think?",
+  "timestamp": "2026-01-11T14:20:38.478489",
+  "model_config": {
+    "name": "qwen2.5:1.5b",
+    "display_name": "Qwen 2.5 (1.5B)",
+    "size_category": "small",
+    "is_reasoning_model": false,
+    "parameters": "1.5B",
+    "supported_strategies": [
+      "zero_shot",
+      "few_shot",
+      "chain_of_thought"
+    ],
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 4096,
+    "additional_params": {}
+  },
+  "generation_time_ms": 3587,
+  "prompt_tokens": 184,
+  "completion_tokens": 103,
+  "scores": {
+    "instruction_adherence": 2,
+    "completeness": 2,
+    "format_compliance": 3
+  },
+  "total_score": 7,
+  "evaluator_notes": null
+}

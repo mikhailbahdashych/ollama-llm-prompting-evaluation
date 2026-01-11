@@ -1,0 +1,33 @@
+{
+  "task_id": "common_sense",
+  "model_name": "deepseek-r1:7b",
+  "strategy": "zero_shot",
+  "prompt": "This task evaluates the model's ability to apply everyday knowledge, practical reasoning, and common sense understanding of how the physical and social world works to solve realistic problems.\n\nAnswer the following common sense reasoning questions. Explain your reasoning for each answer.\n\n1. Sarah left her ice cream on the kitchen counter and went to her room for 2 hours on a hot summer day. When she came back, what most likely happened to the ice cream? Why?\n\n2. Tom wants to hang a heavy picture frame on his wall. He has: a hammer, nails, tape, and glue. Which tool(s) should he use and why? What would happen if he used the wrong tool?\n\n3. Lisa is running late for an important meeting across town. She sees two routes: one is shorter (15 minutes) but goes through the city center during rush hour, the other is longer (25 minutes) but uses the highway. Which route should she choose and why? Consider what factors matter in this decision.\n\nProvide your answers with clear common sense reasoning.",
+  "response": "**Answer 1: Sarah's Ice Cream**\n\nSarah most likely left her ice cream out on the kitchen counter for two hours during a hot summer day. Given the warm environment and exposure to direct sunlight, the ice cream would have melted or softened due to the heat. The process of melting is more likely than any significant hardening under these conditions.\n\n**Answer 2: Tom Hanging a Picture Frame**\n\nTom should use **hammers, nails, tape**, and possibly **glue** for safety and stability:\n\n- **Hammer/Nails**: Essential for securing the frame with nails into the wall.\n- **Tape**: Helps keep the frame steady while hanging to prevent it from moving or falling.\n- **Glue**: Can be used if additional adhesion is needed, such as attaching a mount on another surface.\n\nIf Tom uses tools incorrectly, potential issues include:\n- **Insufficient nails** without glue may lead to the frame coming loose after hanging.\n- **Forgetting tape** could result in the frame falling out of place once hung.\n\n**Answer 3: Lisa's Route Choice**\n\nLisa should choose the longer route via the highway. While it takes longer (25 minutes), this route likely avoids rush hour congestion, which can significantly increase travel time during peak hours. The shorter city center route may have delays due to heavy traffic, making the highway a more efficient choice despite the extra driving time.\n\n**Summary:**\n\n1. **Sarah's Ice Cream**: Most likely melted or softened.\n2. **Tom's Tools**: Use hammer, nails, tape; avoid incorrect tools for safety and stability.\n3. **Lisa's Route**: Choose the longer highway route to avoid rush hour congestion.",
+  "timestamp": "2026-01-11T14:42:00.702513",
+  "model_config": {
+    "name": "deepseek-r1:7b",
+    "display_name": "DeepSeek R1 (7B)",
+    "size_category": "large",
+    "is_reasoning_model": true,
+    "parameters": "7B",
+    "supported_strategies": [
+      "zero_shot",
+      "few_shot"
+    ],
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": -1,
+    "additional_params": {}
+  },
+  "generation_time_ms": 87397,
+  "prompt_tokens": 214,
+  "completion_tokens": 2065,
+  "scores": {
+    "practical_reasoning": 8,
+    "plausibility": 3,
+    "explanation_quality": 3
+  },
+  "total_score": 14,
+  "evaluator_notes": null
+}

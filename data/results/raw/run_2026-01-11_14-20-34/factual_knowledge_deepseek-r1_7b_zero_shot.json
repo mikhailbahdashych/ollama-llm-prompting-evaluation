@@ -1,0 +1,34 @@
+{
+  "task_id": "factual_knowledge",
+  "model_name": "deepseek-r1:7b",
+  "strategy": "zero_shot",
+  "prompt": "This task evaluates the model's ability to accurately recall factual information, provide specific and verifiable details, and demonstrate knowledge across different domains while distinguishing between certainty and uncertainty.\n\nAnswer the following factual questions with accurate, specific information. If you are uncertain about any part of an answer, indicate this.\n\n1. What is the speed of light in a vacuum, and why is this value significant in physics? Provide the value with appropriate units.\n\n2. Who wrote the novel \"One Hundred Years of Solitude,\" and in what year was it originally published? What literary movement is this author associated with?\n\n3. What is photosynthesis, and what are the main inputs and outputs of this process? Include the basic chemical equation if possible.\n\n4. Name three countries that share a border with Germany and provide their capital cities.\n\nProvide accurate, specific factual information for each question.",
+  "response": "**Answer:**\n\n1. **Speed of Light in a Vacuum:**  \n   The speed of light in a vacuum is exactly 299,792,458 meters per second. This constant is fundamental in physics as it defines the exact value of the meter and plays a crucial role in various physical theories and equations.\n\n2. **\"One Hundred Years of Solitude\":**  \n   The novel was written by Gabriel Garc\u00eda M\u00e1rquez, originally published in 1961. It is associated with the Caribbean Realism literary movement.\n\n3. **Photosynthesis:**  \n   Photosynthesis is a process where plants convert light energy into chemical energy. The main inputs are carbon dioxide (CO\u2082) and water (H\u2082O), producing glucose (C\u2086H\u2081\u2082O\u2086) and oxygen (O\u2082). The basic equation is:  \n   6CO\u2082 + 6H\u2082O + light \u2192 C\u2086H\u2081\u2082O\u2086 + 6O\u2082.\n\n4. **Countries Bordered by Germany:**  \n   - **Poland** (Capital: Warsaw)  \n   - **Ukraine** (Capital: Kyiv/Minsk)  \n   - **Belarus** (Capital: Minsk)\n\nEach of these facts is accurate and specific, providing clear and concise information for each question.",
+  "timestamp": "2026-01-11T14:45:19.194454",
+  "model_config": {
+    "name": "deepseek-r1:7b",
+    "display_name": "DeepSeek R1 (7B)",
+    "size_category": "large",
+    "is_reasoning_model": true,
+    "parameters": "7B",
+    "supported_strategies": [
+      "zero_shot",
+      "few_shot"
+    ],
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": -1,
+    "additional_params": {}
+  },
+  "generation_time_ms": 39009,
+  "prompt_tokens": 175,
+  "completion_tokens": 919,
+  "scores": {
+    "accuracy": 3,
+    "completeness": 5,
+    "specificity": 2,
+    "source_reliability": 0
+  },
+  "total_score": 10,
+  "evaluator_notes": null
+}

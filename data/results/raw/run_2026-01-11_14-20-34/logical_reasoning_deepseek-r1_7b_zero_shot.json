@@ -1,0 +1,33 @@
+{
+  "task_id": "logical_reasoning",
+  "model_name": "deepseek-r1:7b",
+  "strategy": "zero_shot",
+  "prompt": "This task evaluates the model's ability to apply formal logical rules, identify valid and invalid inferences, and reason systematically from given premises to sound conclusions.\n\nConsider the following premises:\n\n1. All successful entrepreneurs take calculated risks.\n2. Some people who take calculated risks fail in their ventures.\n3. Maria is a successful entrepreneur.\n4. Everyone who fails in their ventures learns valuable lessons.\n\nBased on these premises, answer the following questions with logical reasoning:\n\na) Can we conclude that Maria takes calculated risks? Explain your reasoning.\nb) Can we conclude that Maria has failed in her ventures? Explain why or why not.\nc) If someone learns valuable lessons, does that necessarily mean they failed in their ventures? Explain the logical relationship.\n\nProvide your analysis with clear logical reasoning for each answer.",
+  "response": "**Answer:**\n\na) Yes, we can conclude that Maria takes calculated risks because premise 1 states all successful entrepreneurs take calculated risks, and premise 3 confirms Maria is a successful entrepreneur.\n\nb) No, we cannot conclude Maria has failed in her ventures. Premise 2 only indicates some people who take calculated risks fail but doesn't specify if Maria is among them.\n\nc) No, learning valuable lessons does not necessarily mean someone failed because premise 4 only states failing leads to learning, not that learning must come from failure.",
+  "timestamp": "2026-01-11T14:22:25.034332",
+  "model_config": {
+    "name": "deepseek-r1:7b",
+    "display_name": "DeepSeek R1 (7B)",
+    "size_category": "large",
+    "is_reasoning_model": true,
+    "parameters": "7B",
+    "supported_strategies": [
+      "zero_shot",
+      "few_shot"
+    ],
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": -1,
+    "additional_params": {}
+  },
+  "generation_time_ms": 30424,
+  "prompt_tokens": 161,
+  "completion_tokens": 717,
+  "scores": {
+    "logical_validity": 10,
+    "completeness": 5,
+    "clarity": 4
+  },
+  "total_score": 19,
+  "evaluator_notes": null
+}

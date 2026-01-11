@@ -1,0 +1,34 @@
+{
+  "task_id": "instruction_following",
+  "model_name": "qwen2.5:1.5b",
+  "strategy": "few_shot",
+  "prompt": "This task evaluates the model's ability to carefully follow multiple specific instructions and constraints while completing a task. It tests attention to detail and instruction adherence.\n\nHere are some examples:\n\nExample 1:\nInput: Write a short poem about winter. Follow these rules:\n1. The poem must be exactly 3 lines long\n2. Each line must have exactly 5 words\n3. The last word must rhyme with \"snow\"\n4. Do not use the word \"cold\"\n\nWrite the poem now.\nOutput: Winter brings the soft white snow\nChildren play and watch it glow\nNature puts on quite a show\nExplanation: This output correctly follows all four constraints: 3 lines, 5 words per line, ends with 'snow' (rhyming with itself), and doesn't use 'cold'. The poem is coherent while meeting all requirements.\n\nExample 2:\nInput: Describe a coffee shop in 2 sentences. Requirements:\n1. First sentence must mention the word \"aroma\"\n2. Second sentence must be a question\n3. Use exactly one adjective in each sentence\n4. Do not use the word \"delicious\"\n\nWrite the description.\nOutput: The rich aroma fills the cozy space as customers arrive. Would you like to experience this welcoming atmosphere?\nExplanation: Follows all constraints: mentions 'aroma' in first sentence, second sentence is a question, one adjective per sentence (rich, welcoming), and avoids 'delicious'.\n\nNow solve this:\nWrite a brief description of a smartphone for a product catalog. Your description must follow ALL of these constraints:\n\n1. The description must be EXACTLY 4 sentences long (no more, no less)\n2. The first sentence must start with the word \"Introducing\"\n3. You must mention exactly THREE features (battery, camera, display)\n4. Do NOT use the words \"amazing\", \"incredible\", or \"revolutionary\"\n5. End the description with a question\n6. Use at least one comparison (e.g., \"faster than\", \"brighter than\")\n\nWrite the product description now.",
+  "response": "Introducing our latest smartphone, designed for everyday use and beyond.\n\n1. Introducing our sleek design, featuring a 5.5-inch display that offers stunning clarity.\n2. The battery life is exceptional, lasting up to 10 hours on a single charge without needing an extra boost.\n3. Equipped with a high-resolution camera system capable of capturing every detail in your favorite moments.\n4. Our smartphone also boasts an advanced processor for seamless multitasking and smooth performance.\n\nWhich smartphone will you choose? Would it be faster, brighter or more durable than the others on offer?",
+  "timestamp": "2026-01-11T14:20:40.642509",
+  "model_config": {
+    "name": "qwen2.5:1.5b",
+    "display_name": "Qwen 2.5 (1.5B)",
+    "size_category": "small",
+    "is_reasoning_model": false,
+    "parameters": "1.5B",
+    "supported_strategies": [
+      "zero_shot",
+      "few_shot",
+      "chain_of_thought"
+    ],
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 4096,
+    "additional_params": {}
+  },
+  "generation_time_ms": 2161,
+  "prompt_tokens": 452,
+  "completion_tokens": 118,
+  "scores": {
+    "instruction_adherence": 2,
+    "completeness": 2,
+    "format_compliance": 0
+  },
+  "total_score": 4,
+  "evaluator_notes": null
+}

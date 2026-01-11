@@ -1,0 +1,33 @@
+{
+  "task_id": "common_sense",
+  "model_name": "deepseek-r1:7b",
+  "strategy": "few_shot",
+  "prompt": "This task evaluates the model's ability to apply everyday knowledge, practical reasoning, and common sense understanding of how the physical and social world works to solve realistic problems.\n\nHere are some examples:\n\nExample 1:\nInput: Question: You need to know if milk in your refrigerator is still good to drink. The expiration date was 3 days ago. What should you do before drinking it?\nOutput: Before drinking the milk, you should:\n\n1. Smell it - sour milk has a distinct unpleasant odor\n2. Check its appearance - look for any discoloration or lumps\n3. If it passes those tests, taste a small amount\n\nThis is common sense because even though the expiration date was 3 days ago, milk can still be good if properly refrigerated, or it might have gone bad before the date if not stored correctly. The expiration date is a guideline, but your senses (smell, sight, taste) are reliable indicators of whether food is safe. Most people have learned through experience that sour milk smells and tastes bad, so checking before consuming is a practical safety measure.\nExplanation: This demonstrates common sense by combining knowledge of expiration dates (they're guidelines, not absolutes), understanding of food safety, and practical testing methods that anyone can perform.\n\nExample 2:\nInput: Question: Why do people typically check the weather forecast before planning an outdoor wedding?\nOutput: People check the weather forecast before planning an outdoor wedding because:\n\n1. Rain or storms would ruin an outdoor event, making guests uncomfortable and damaging decorations\n2. Extreme heat or cold affects guest comfort and safety\n3. Weather can't be controlled, but planning can be adjusted based on forecasts\n4. Having a backup plan (like a tent or indoor location) requires advance preparation\n\nThis is common sense because outdoor events are directly affected by weather conditions, and checking the forecast allows people to either choose a better date or prepare contingencies. It's much easier to prevent weather-related problems than to deal with them during the event. Most people have experienced being caught in unexpected rain and understand why advance planning matters.\nExplanation: This shows understanding of practical planning, cause-and-effect (weather affects outdoor activities), and why prevention is better than reaction in event planning.\n\nNow solve this:\nAnswer the following common sense reasoning questions. Explain your reasoning for each answer.\n\n1. Sarah left her ice cream on the kitchen counter and went to her room for 2 hours on a hot summer day. When she came back, what most likely happened to the ice cream? Why?\n\n2. Tom wants to hang a heavy picture frame on his wall. He has: a hammer, nails, tape, and glue. Which tool(s) should he use and why? What would happen if he used the wrong tool?\n\n3. Lisa is running late for an important meeting across town. She sees two routes: one is shorter (15 minutes) but goes through the city center during rush hour, the other is longer (25 minutes) but uses the highway. Which route should she choose and why? Consider what factors matter in this decision.\n\nProvide your answers with clear common sense reasoning.",
+  "response": "**Answer 1: Sarah's Ice Cream**\n\nSarah left her ice cream on the kitchen counter for two hours on a hot summer day. Most likely, the ice cream has melted because it was exposed to room temperature without proper refrigeration. Proteins in the ice cream begin to break down when exposed to heat and moisture, leading to spoilage after a short period of exposure.\n\n**Answer 2: Tom Hanging Picture Frame**\n\nTom should use both the hammer and nails along with tape as a clamp for hanging the picture frame. The hammer is essential for driving nails into the wall, while the tape acts as an effective clamp to secure the frame in place before nail insertion, preventing it from shifting during the process.\n\nIf Tom uses only the hammer without a clamp (like tape), the frame might shift or damage itself due to improper alignment and potential movement during hammering. Similarly, using nails alone would not ensure the frame is securely held, risking damage or misalignment. Using glue instead of nails could lead to incorrect placement as well.\n\n**Answer 3: Lisa's Route Decision**\n\nLisa should choose the longer route via the highway despite its longer distance because it offers better traffic conditions during rush hour compared to the city center. The shorter route through the city may result in significant delays due to heavy congestion, making the longer but less congested highway a more reliable option for timely arrival.\n\nFactors considered: Traffic conditions on both routes, potential time saved versus added delays from traffic, and the need to arrive quickly despite longer distance.",
+  "timestamp": "2026-01-11T14:42:38.651416",
+  "model_config": {
+    "name": "deepseek-r1:7b",
+    "display_name": "DeepSeek R1 (7B)",
+    "size_category": "large",
+    "is_reasoning_model": true,
+    "parameters": "7B",
+    "supported_strategies": [
+      "zero_shot",
+      "few_shot"
+    ],
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": -1,
+    "additional_params": {}
+  },
+  "generation_time_ms": 37942,
+  "prompt_tokens": 637,
+  "completion_tokens": 870,
+  "scores": {
+    "practical_reasoning": 7,
+    "plausibility": 3,
+    "explanation_quality": 3
+  },
+  "total_score": 13,
+  "evaluator_notes": null
+}

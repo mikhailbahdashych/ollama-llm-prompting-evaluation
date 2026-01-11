@@ -1,0 +1,34 @@
+{
+  "task_id": "code_generation",
+  "model_name": "deepseek-r1:7b",
+  "strategy": "zero_shot",
+  "prompt": "This task evaluates the model's ability to write correct, efficient, and well-documented Python code that solves a specific algorithmic problem.\n\nWrite a Python function called `find_pair_sum` that takes a list of integers and a target sum as parameters. The function should return all unique pairs of numbers from the list that add up to the target sum.\n\nRequirements:\n- Function signature: `def find_pair_sum(numbers: list[int], target: int) -> list[tuple[int, int]]`\n- Each pair should be returned as a tuple with the smaller number first\n- Pairs should be unique (no duplicate pairs)\n- Return an empty list if no pairs are found\n- The same element cannot be used twice in a pair\n\nExample:\n- Input: numbers = [2, 7, 11, 15, 3], target = 9\n- Output: [(2, 7)]\n\n- Input: numbers = [1, 5, 3, 7, 2, 8], target = 10\n- Output: [(2, 8), (3, 7)]\n\nWrite the complete function with appropriate documentation.",
+  "response": "To solve this problem, we need to evaluate a list of numbers and determine which pairs of distinct elements sum up to a given target value. Each pair should appear exactly once in the result, regardless of how many times it can be formed by different positions in the list.\n\n### Approach\nThe approach involves using combinations from Python's `itertools` module to generate all possible unique pairs of indices (i, j) where i < j. For each pair, we check if their sum equals the target value. If it does, we create a tuple with the smaller number first and add it to the result list only once.\n\nThis ensures that each valid pair is considered exactly once and added to the result regardless of how many times they appear in different positions in the input list.\n\n### Solution Code\n```python\nimport itertools\n\ndef evaluate(numbers, target):\n    seen = set()\n    result = []\n    for a, b in itertools.combinations(numbers, 2):\n        if (a + b) == target:\n            pair = tuple(sorted((a, b)))\n            if pair not in seen:\n                result.append(pair)\n                seen.add(pair)\n    return result\n```\n\n### Explanation\n1. **Combinations Generation**: Using `itertools.combinations`, we generate all possible pairs of elements from the input list where each element is considered exactly once with every other element that comes after it.\n2. **Sum Check**: For each generated pair, we check if their sum equals the target value.\n3. **Tuple Creation and Uniqueness Check**: Each valid pair is converted into a sorted tuple to ensure consistency (i.e., always in ascending order). We use a set to track which tuples have already been added to avoid duplicates.\n4. **Result Collection**: Valid pairs are collected into the result list only once, ensuring each unique pair appears exactly once.\n\nThis approach efficiently handles duplicate values and ensures that all valid pairs are considered without repetition, providing an accurate solution to the problem.",
+  "timestamp": "2026-01-11T14:33:28.975260",
+  "model_config": {
+    "name": "deepseek-r1:7b",
+    "display_name": "DeepSeek R1 (7B)",
+    "size_category": "large",
+    "is_reasoning_model": true,
+    "parameters": "7B",
+    "supported_strategies": [
+      "zero_shot",
+      "few_shot"
+    ],
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": -1,
+    "additional_params": {}
+  },
+  "generation_time_ms": 422721,
+  "prompt_tokens": 241,
+  "completion_tokens": 9817,
+  "scores": {
+    "correctness": 7,
+    "code_quality": 3,
+    "efficiency": 2,
+    "documentation": 0
+  },
+  "total_score": 12,
+  "evaluator_notes": null
+}

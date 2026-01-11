@@ -1,0 +1,33 @@
+{
+  "task_id": "instruction_following",
+  "model_name": "deepseek-r1:7b",
+  "strategy": "zero_shot",
+  "prompt": "This task evaluates the model's ability to carefully follow multiple specific instructions and constraints while completing a task. It tests attention to detail and instruction adherence.\n\nWrite a brief description of a smartphone for a product catalog. Your description must follow ALL of these constraints:\n\n1. The description must be EXACTLY 4 sentences long (no more, no less)\n2. The first sentence must start with the word \"Introducing\"\n3. You must mention exactly THREE features (battery, camera, display)\n4. Do NOT use the words \"amazing\", \"incredible\", or \"revolutionary\"\n5. End the description with a question\n6. Use at least one comparison (e.g., \"faster than\", \"brighter than\")\n\nWrite the product description now.",
+  "response": "Introducing an advanced smartphone featuring a 48MP camera, an improved display with enhanced brightness, and extended battery life for everyday use. The camera captures high-quality photos and videos faster than previous models, while the display ensures vibrant colors in direct sunlight. Will you benefit from these upgrades?",
+  "timestamp": "2026-01-11T14:21:10.918482",
+  "model_config": {
+    "name": "deepseek-r1:7b",
+    "display_name": "DeepSeek R1 (7B)",
+    "size_category": "large",
+    "is_reasoning_model": true,
+    "parameters": "7B",
+    "supported_strategies": [
+      "zero_shot",
+      "few_shot"
+    ],
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": -1,
+    "additional_params": {}
+  },
+  "generation_time_ms": 22654,
+  "prompt_tokens": 158,
+  "completion_tokens": 435,
+  "scores": {
+    "instruction_adherence": 5,
+    "completeness": 4,
+    "format_compliance": 1
+  },
+  "total_score": 10,
+  "evaluator_notes": null
+}
