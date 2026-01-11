@@ -1,0 +1,35 @@
+{
+  "task_id": "code_generation",
+  "model_name": "qwen2.5:1.5b",
+  "strategy": "zero_shot",
+  "prompt": "This task evaluates the model's ability to write correct, efficient, and well-documented Python code that solves a specific algorithmic problem.\n\nWrite a Python function called `find_pair_sum` that takes a list of integers and a target sum as parameters. The function should return all unique pairs of numbers from the list that add up to the target sum.\n\nRequirements:\n- Function signature: `def find_pair_sum(numbers: list[int], target: int) -> list[tuple[int, int]]`\n- Each pair should be returned as a tuple with the smaller number first\n- Pairs should be unique (no duplicate pairs)\n- Return an empty list if no pairs are found\n- The same element cannot be used twice in a pair\n\nExample:\n- Input: numbers = [2, 7, 11, 15, 3], target = 9\n- Output: [(2, 7)]\n\n- Input: numbers = [1, 5, 3, 7, 2, 8], target = 10\n- Output: [(2, 8), (3, 7)]\n\nWrite the complete function with appropriate documentation.",
+  "response": "```python\nfrom typing import List, Tuple\n\ndef find_pair_sum(numbers: List[int], target: int) -> List[Tuple[int, int]]:\n    \"\"\"\n    Finds all unique pairs of numbers from the list that add up to the given target sum.\n    \n    Parameters:\n    - numbers (List[int]): The list of integers to search through.\n    - target (int): The target sum for the pairs.\n    \n    Returns:\n    - List[Tuple[int, int]]: A list of tuples representing unique pairs that add up to the target sum.\n    \n    Example usage:\n    >>> find_pair_sum([2, 7, 11, 15, 3], 9)\n    [(2, 7)]\n    >>> find_pair_sum([1, 5, 3, 7, 2, 8], 10)\n    [(2, 8), (3, 7)]\n    \"\"\"\n    seen = {}\n    pairs = set()\n    \n    for number in numbers:\n        complement = target - number\n        if complement in seen:\n            pairs.add((min(number, complement), max(number, complement)))\n        \n        seen[number] = True\n    \n    return list(pairs)\n\n# Example check function to verify the correctness of the solution\ndef check_solution():\n    assert find_pair_sum([2, 7, 11, 15, 3], 9) == [(2, 7)], \"Test case 1 failed\"\n    assert find_pair_sum([1, 5, 3, 7, 2, 8], 10) == [(2, 8), (3, 7)], \"Test case 2 failed\"\n    print(\"All test cases passed!\")\n\ncheck_solution()\n```\n\nThis solution defines the `find_pair_sum` function that takes a list of integers and a target sum as inputs. It uses two sets: one to keep track of numbers seen so far (`seen`) and another to store unique pairs found (`pairs`). As it iterates through the list, it checks if the complement (to reach the target sum) of each number has already been seen. If so, it adds the pair to `pairs` and ensures no duplicates by converting the tuple to a set before adding it back into `pairs`. Finally, it returns the list of unique pairs.",
+  "timestamp": "2026-01-11T14:26:09.122542",
+  "model_config": {
+    "name": "qwen2.5:1.5b",
+    "display_name": "Qwen 2.5 (1.5B)",
+    "size_category": "small",
+    "is_reasoning_model": false,
+    "parameters": "1.5B",
+    "supported_strategies": [
+      "zero_shot",
+      "few_shot",
+      "chain_of_thought"
+    ],
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 4096,
+    "additional_params": {}
+  },
+  "generation_time_ms": 8226,
+  "prompt_tokens": 267,
+  "completion_tokens": 483,
+  "scores": {
+    "correctness": 9,
+    "code_quality": 5,
+    "efficiency": 3,
+    "documentation": 2
+  },
+  "total_score": 19,
+  "evaluator_notes": null
+}

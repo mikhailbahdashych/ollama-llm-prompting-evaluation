@@ -1,0 +1,35 @@
+{
+  "task_id": "math_solving",
+  "model_name": "qwen2.5:1.5b",
+  "strategy": "few_shot",
+  "prompt": "This task evaluates the model's ability to solve mathematical problems using appropriate methods, show clear step-by-step work, explain mathematical reasoning, and arrive at correct numerical answers.\n\nHere are some examples:\n\nExample 1:\nInput: Problem: Tom has $500 in a savings account that earns 4% simple interest per year. How much money will he have after 3 years? Show your work.\nOutput: To solve this problem, I'll use the simple interest formula:\n\nSimple Interest = Principal \u00d7 Rate \u00d7 Time\nFinal Amount = Principal + Simple Interest\n\nGiven information:\n- Principal (P) = $500\n- Rate (R) = 4% = 0.04 (converting percentage to decimal)\n- Time (T) = 3 years\n\nStep 1: Calculate the simple interest\nSimple Interest = P \u00d7 R \u00d7 T\nSimple Interest = $500 \u00d7 0.04 \u00d7 3\nSimple Interest = $60\n\nStep 2: Calculate the final amount\nFinal Amount = Principal + Simple Interest\nFinal Amount = $500 + $60\nFinal Amount = $560\n\nAnswer: Tom will have $560 after 3 years.\nExplanation: This solution shows clear organization, identifies the appropriate formula, lists given information, shows each calculation step, and provides the final answer with appropriate units (dollars).\n\nExample 2:\nInput: Problem: Solve for x: 3(x - 4) = 2x + 5\nOutput: I'll solve this equation step by step using algebraic manipulation.\n\nStarting equation: 3(x - 4) = 2x + 5\n\nStep 1: Distribute the 3 on the left side\n3x - 12 = 2x + 5\n\nStep 2: Subtract 2x from both sides to get x terms on one side\n3x - 2x - 12 = 2x - 2x + 5\nx - 12 = 5\n\nStep 3: Add 12 to both sides to isolate x\nx - 12 + 12 = 5 + 12\nx = 17\n\nStep 4: Check the solution by substituting back\nLeft side: 3(17 - 4) = 3(13) = 39\nRight side: 2(17) + 5 = 34 + 5 = 39\nBoth sides equal 39 \u2713\n\nAnswer: x = 17\nExplanation: This shows proper algebraic technique with clear steps, explains each operation, and includes verification of the answer, demonstrating thorough mathematical problem-solving.\n\nNow solve this:\nSolve the following math problems. Show all your work and explain your reasoning for each step.\n\nProblem 1: Sarah is planning a rectangular garden. The length is 3 meters more than twice the width. If the perimeter of the garden is 36 meters, what are the dimensions (length and width) of the garden?\n\nProblem 2: A store is having a sale. A jacket originally costs $120. First, it's discounted by 25%, and then an additional 10% is taken off the sale price. What is the final price of the jacket?\n\nProblem 3: If f(x) = 2x\u00b2 - 5x + 3, find f(4). Show your substitution and calculation steps.\n\nSolve all three problems with clear step-by-step work.",
+  "response": "### Problem 1:\n**Given:** The length (L) is 3 meters more than twice the width (W).\n\nLet's denote the width by \\( W \\).\nTherefore, the length \\( L = 2W + 3 \\).\n\nThe perimeter of a rectangle is given by:\n\\[ P = 2(L + W) \\]\n\nGiven that the perimeter \\( P \\) is 36 meters, we can write:\n\\[ 2((2W + 3) + W) = 36 \\]\nSimplify and solve for \\( W \\):\n\\[ 2(3W + 3) = 36 \\]\n\\[ 6W + 6 = 36 \\]\nSubtract 6 from both sides:\n\\[ 6W = 30 \\]\nDivide by 6:\n\\[ W = 5 \\]\n\nNow find the length \\( L \\):\n\\[ L = 2(5) + 3 = 10 + 3 = 13 \\]\n\nSo, the dimensions of the garden are:\n- Width (W) = 5 meters\n- Length (L) = 13 meters\n\n### Problem 2:\n**Given:** A jacket originally costs $120. First, it's discounted by 25%, and then an additional 10% is taken off the sale price.\n\nFirst discount: \\( \\text{Discount} = 120 - (120 \\times 0.25) \\)\n\\[ \\text{Discounted Price} = 120 - 30 = 90 \\]\n\nSecond discount: \\( \\text{Additional Discount} = 90 - (90 \\times 0.10) \\)\n\\[ \\text{Final Price} = 90 - 9 = 81 \\]\n\nSo, the final price of the jacket is:\n- Final Price = $81\n\n### Problem 3: Given \\( f(x) = 2x^2 - 5x + 3 \\), find \\( f(4) \\).\n\n**Substitution and Calculation Steps:**\n\nCalculate \\( f(4) \\):\n\\[ f(4) = 2(4)^2 - 5(4) + 3 \\]\n\nFirst, compute the squared term:\n\\[ (4)^2 = 16 \\]\nThen multiply by the coefficient of \\( x^2 \\):\n\\[ 2 \\times 16 = 32 \\]\n\nNext, calculate the second part:\n\\[ 5 \\times 4 = 20 \\]\n\nNow substitute back into the function and simplify:\n\\[ f(4) = 32 - 20 + 3 \\]\n\\[ f(4) = 15 + 3 \\]\n\\[ f(4) = 18 \\]\n\nSo, \\( f(4) = 18 \\).\n\n### Summary of Answers:\n\n- **Problem 1:** Width = 5 meters, Length = 13 meters\n- **Problem 2:** Final Price = $81\n- **Problem 3:** \\( f(4) = 18 \\)",
+  "timestamp": "2026-01-11T14:46:11.808937",
+  "model_config": {
+    "name": "qwen2.5:1.5b",
+    "display_name": "Qwen 2.5 (1.5B)",
+    "size_category": "small",
+    "is_reasoning_model": false,
+    "parameters": "1.5B",
+    "supported_strategies": [
+      "zero_shot",
+      "few_shot",
+      "chain_of_thought"
+    ],
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 4096,
+    "additional_params": {}
+  },
+  "generation_time_ms": 10816,
+  "prompt_tokens": 766,
+  "completion_tokens": 654,
+  "scores": {
+    "correctness": 6,
+    "methodology": 5,
+    "step_clarity": 3,
+    "explanation": 1
+  },
+  "total_score": 15,
+  "evaluator_notes": null
+}

@@ -1,0 +1,34 @@
+{
+  "task_id": "common_sense",
+  "model_name": "qwen2.5:1.5b",
+  "strategy": "chain_of_thought",
+  "prompt": "This task evaluates the model's ability to apply everyday knowledge, practical reasoning, and common sense understanding of how the physical and social world works to solve realistic problems.\n\nAnswer the following common sense reasoning questions. Explain your reasoning for each answer.\n\n1. Sarah left her ice cream on the kitchen counter and went to her room for 2 hours on a hot summer day. When she came back, what most likely happened to the ice cream? Why?\n\n2. Tom wants to hang a heavy picture frame on his wall. He has: a hammer, nails, tape, and glue. Which tool(s) should he use and why? What would happen if he used the wrong tool?\n\n3. Lisa is running late for an important meeting across town. She sees two routes: one is shorter (15 minutes) but goes through the city center during rush hour, the other is longer (25 minutes) but uses the highway. Which route should she choose and why? Consider what factors matter in this decision.\n\nProvide your answers with clear common sense reasoning.\n\nLet's approach this step by step:\n1. First, analyze the problem carefully\n2. Then, work through it systematically\n3. Finally, provide your answer\n\nPlease show your reasoning at each step.",
+  "response": "### 1. Sarah left her ice cream on the kitchen counter and went to her room for 2 hours on a hot summer day. When she came back, what most likely happened to the ice cream? Why?\n\n**Step-by-Step Reasoning:**\n\n1. **Identify the given information:**\n   - Sarah left her ice cream on the kitchen counter.\n   - She stayed in the kitchen for 2 hours.\n\n2. **Consider possible scenarios:**\n   - The ice cream could melt due to the warm weather.\n   - The heat might cause it to deteriorate or spoil over time.\n\n3. **Reasoning:**\n   - Given that Sarah left her ice cream on the kitchen counter and stayed in the same environment for 2 hours, it is most likely that the temperature of the room rose significantly during those hours.\n   - This could lead to the ice cream melting entirely if not refrigerated properly or partially deteriorating due to excessive heat.\n\n**Conclusion:**\nThe most likely outcome is that Sarah's ice cream melted because of the high ambient temperature in her kitchen over the 2-hour period.",
+  "timestamp": "2026-01-11T14:40:33.301955",
+  "model_config": {
+    "name": "qwen2.5:1.5b",
+    "display_name": "Qwen 2.5 (1.5B)",
+    "size_category": "small",
+    "is_reasoning_model": false,
+    "parameters": "1.5B",
+    "supported_strategies": [
+      "zero_shot",
+      "few_shot",
+      "chain_of_thought"
+    ],
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 4096,
+    "additional_params": {}
+  },
+  "generation_time_ms": 3822,
+  "prompt_tokens": 282,
+  "completion_tokens": 227,
+  "scores": {
+    "practical_reasoning": 2,
+    "plausibility": 2,
+    "explanation_quality": 2
+  },
+  "total_score": 6,
+  "evaluator_notes": null
+}

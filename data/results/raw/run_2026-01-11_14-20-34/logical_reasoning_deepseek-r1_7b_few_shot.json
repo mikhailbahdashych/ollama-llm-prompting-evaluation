@@ -1,0 +1,33 @@
+{
+  "task_id": "logical_reasoning",
+  "model_name": "deepseek-r1:7b",
+  "strategy": "few_shot",
+  "prompt": "This task evaluates the model's ability to apply formal logical rules, identify valid and invalid inferences, and reason systematically from given premises to sound conclusions.\n\nHere are some examples:\n\nExample 1:\nInput: Given: All birds have feathers. Some animals with feathers can fly. Penguins are birds. Penguins cannot fly.\n\nQuestion: What can we logically conclude about the relationship between having feathers and being able to fly?\nOutput: We can conclude that having feathers is NOT sufficient for being able to fly. Here's the logical reasoning:\n\n1. From \"All birds have feathers\" and \"Penguins are birds,\" we know penguins have feathers.\n2. From \"Penguins cannot fly,\" we know that something can have feathers and not fly.\n3. Therefore, having feathers does not guarantee the ability to fly.\n\nThe statement \"Some animals with feathers can fly\" tells us that flight is possible for some feathered animals, but the penguin example proves it's not universal. Having feathers is a necessary condition for birds, but not a sufficient condition for flight.\nExplanation: This demonstrates proper logical reasoning by identifying the distinction between necessary and sufficient conditions, and correctly using the penguin counterexample to disprove a universal claim.\n\nExample 2:\nInput: If it rains, the ground gets wet. The ground is wet. Can we conclude it rained?\nOutput: No, we cannot logically conclude that it rained. This is a logical fallacy called \"affirming the consequent.\"\n\nThe premise states: If rain \u2192 wet ground\nWe observe: wet ground\nThis does NOT allow us to conclude: rain\n\nWhile rain is sufficient to make the ground wet, it's not the only possible cause. The ground could be wet from:\n- Sprinklers\n- A burst pipe\n- Morning dew\n- Someone washing their car\n\nTo validly conclude it rained, we would need the reverse implication: \"If and only if it rains, the ground gets wet\" or \"The ground is wet only when it rains.\" Since we don't have this, we cannot make the conclusion.\nExplanation: This correctly identifies the logical fallacy and explains why the reasoning is invalid, showing understanding of conditional logic and the difference between if-then and if-and-only-if relationships.\n\nNow solve this:\nConsider the following premises:\n\n1. All successful entrepreneurs take calculated risks.\n2. Some people who take calculated risks fail in their ventures.\n3. Maria is a successful entrepreneur.\n4. Everyone who fails in their ventures learns valuable lessons.\n\nBased on these premises, answer the following questions with logical reasoning:\n\na) Can we conclude that Maria takes calculated risks? Explain your reasoning.\nb) Can we conclude that Maria has failed in her ventures? Explain why or why not.\nc) If someone learns valuable lessons, does that necessarily mean they failed in their ventures? Explain the logical relationship.\n\nProvide your analysis with clear logical reasoning for each answer.",
+  "response": "**a) Conclusion: Maria takes calculated risks**\n\nYes, we can conclude that Maria takes calculated risks.\n\n**Explanation:**\nFrom premise 3, Maria is a successful entrepreneur. According to premise 1, all successful entrepreneurs take calculated risks. Therefore, by logical deduction (modus ponens), since Maria is an SE, she must take calculated risks.\n\n---\n\n**b) Conclusion: We cannot conclude that Maria has failed in her ventures**\n\nNo, we cannot conclusively determine that Maria has failed in her ventures.\n\n**Explanation:**\nPremise 2 states that some people who take calculated risks fail. However, this does not mean all CR individuals fail. Since Maria is a successful entrepreneur and thus takes calculated risks (from premise 1), she might be among those who fail or succeed. There's no information indicating whether Maria specifically failed.\n\n---\n\n**c) Conclusion: No, someone learning valuable lessons does not necessarily mean they failed in their ventures**\n\nNo, failing is not a necessary condition for learning valuable lessons.\n\n**Explanation:**\nPremise 4 tells us that everyone who fails learns lessons (F \u2192 LL). However, this does not imply that only those who fail learn lessons. It's possible to learn lessons without failing. Therefore, learning lessons can occur through other means besides failure.",
+  "timestamp": "2026-01-11T14:23:14.315548",
+  "model_config": {
+    "name": "deepseek-r1:7b",
+    "display_name": "DeepSeek R1 (7B)",
+    "size_category": "large",
+    "is_reasoning_model": true,
+    "parameters": "7B",
+    "supported_strategies": [
+      "zero_shot",
+      "few_shot"
+    ],
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": -1,
+    "additional_params": {}
+  },
+  "generation_time_ms": 49275,
+  "prompt_tokens": 593,
+  "completion_tokens": 1117,
+  "scores": {
+    "logical_validity": 10,
+    "completeness": 5,
+    "clarity": 5
+  },
+  "total_score": 20,
+  "evaluator_notes": null
+}

@@ -1,0 +1,35 @@
+{
+  "task_id": "reading_comprehension",
+  "model_name": "qwen2.5:1.5b",
+  "strategy": "few_shot",
+  "prompt": "This task evaluates the model's ability to carefully read and understand a text passage, extract relevant information, make inferences based on the text, and provide accurate, evidence-based answers to questions.\n\nHere are some examples:\n\nExample 1:\nInput: Passage: Marie Curie was the first woman to win a Nobel Prize and remains the only person to win Nobel Prizes in two different scientific fields\u2014physics in 1903 and chemistry in 1911. Born in Warsaw in 1867, she moved to Paris to study at the Sorbonne, where she met her husband Pierre Curie. Together, they discovered two new elements: polonium and radium. Despite facing discrimination as a woman in science, her work on radioactivity laid the foundation for important medical treatments.\n\nQuestion: What makes Marie Curie's Nobel Prize achievements unique?\nOutput: Marie Curie's Nobel Prize achievements are unique in two ways, according to the passage:\n\n1. She was the first woman to win a Nobel Prize\n2. She is the only person to have won Nobel Prizes in two different scientific fields\u2014she won in physics (1903) and chemistry (1911)\n\nThe passage specifically emphasizes that no other person has achieved this dual-field accomplishment, making her achievement historically singular.\nExplanation: This answer accurately extracts the two key facts from the passage, provides specific details (years and fields), and stays grounded in what the text actually states without adding outside information.\n\nExample 2:\nInput: Passage: The Mediterranean diet, rich in olive oil, fish, vegetables, and whole grains, has been associated with numerous health benefits in scientific studies. Researchers attribute these benefits primarily to the diet's high content of omega-3 fatty acids from fish and monounsaturated fats from olive oil, rather than to any single \"superfood.\"\n\nQuestion: According to the passage, what causes the health benefits of the Mediterranean diet?\nOutput: According to the passage, researchers attribute the health benefits of the Mediterranean diet primarily to two nutritional components:\n\n1. Omega-3 fatty acids, which come from fish\n2. Monounsaturated fats, which come from olive oil\n\nThe passage specifically notes that these benefits are due to these nutritional components rather than any single \"superfood,\" suggesting it's the combination and type of fats that matter.\nExplanation: This answer correctly identifies the specific causal factors mentioned in the passage and notes the distinction the passage makes about the source of benefits.\n\nNow solve this:\nRead the following passage carefully:\n\nThe concept of neuroplasticity has revolutionized our understanding of the human brain. For decades, scientists believed that the brain's structure was fixed after childhood, with neural pathways set in stone by early adulthood. However, research over the past thirty years has revealed that the brain remains remarkably adaptable throughout life. When we learn new skills, form memories, or recover from injury, our brains physically change by forming new neural connections and strengthening existing ones.\n\nThis discovery has profound implications for education and rehabilitation. Adults learning a second language, for instance, show measurable changes in brain structure, with increased gray matter in language-processing regions. Similarly, stroke patients who engage in intensive therapy can sometimes regain lost functions as undamaged parts of the brain take over the roles of damaged areas. The brain's ability to reorganize itself isn't unlimited\u2014age, severity of injury, and other factors play important roles\u2014but the potential for change extends far beyond what was previously thought possible.\n\nQuestions:\n1. According to the passage, what was the traditional scientific view of brain structure, and how has this view changed?\n2. What evidence does the passage provide to support the concept of neuroplasticity? Give specific examples.\n3. What limitation of neuroplasticity is mentioned in the passage?",
+  "response": "### Answer:\n\n#### 1. According to the passage, what was the traditional scientific view of brain structure, and how has this view changed?\n\n**Traditional Scientific View:**\nThe traditional scientific view on brain structure held that it was fixed after childhood, with neural pathways set in stone by early adulthood.\n\n**Change:**\nThis view has shifted dramatically through research conducted over the past 30 years. The passage states:\n- \"For decades, scientists believed that the brain's structure was fixed after childhood, with neural pathways set in stone by early adulthood.\"\n\n#### 2. What evidence does the passage provide to support the concept of neuroplasticity? Give specific examples.\n\n**Examples:**\n- **Adult Learning a Second Language:** \n  The passage mentions that adults learning a second language show measurable changes in brain structure:\n  - \"When we learn new skills, form memories, or recover from injury, our brains physically change by forming new neural connections and strengthening existing ones.\"\n\n- **Stroke Patients:**\n  Stroke patients can sometimes regain lost functions as undamaged parts of the brain take over roles previously held by damaged areas. The passage states:\n  - \"Similarly, stroke patients who engage in intensive therapy can sometimes regain lost functions as undamaged parts of the brain take over the roles of damaged areas.\"\n\n#### 3. What limitation of neuroplasticity is mentioned in the passage?\n\n**Limitation:**\nThe potential for change by the brain's reorganizing itself is not unlimited:\n- **Age, Severity of Injury, and Other Factors:** \n  The text mentions that other factors such as age, severity of injury, and specific conditions play important roles. The passage states:\n  - \"However, research over the past thirty years has revealed that the brain remains remarkably adaptable throughout life.\"\n\nTherefore, while neuroplasticity offers significant potential for change, it is not universally unlimited but depends on various external factors affecting both age and severity of injury.",
+  "timestamp": "2026-01-11T14:39:11.484520",
+  "model_config": {
+    "name": "qwen2.5:1.5b",
+    "display_name": "Qwen 2.5 (1.5B)",
+    "size_category": "small",
+    "is_reasoning_model": false,
+    "parameters": "1.5B",
+    "supported_strategies": [
+      "zero_shot",
+      "few_shot",
+      "chain_of_thought"
+    ],
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 4096,
+    "additional_params": {}
+  },
+  "generation_time_ms": 6881,
+  "prompt_tokens": 794,
+  "completion_tokens": 394,
+  "scores": {
+    "accuracy": 7,
+    "completeness": 4,
+    "evidence_based": 2,
+    "clarity": 2
+  },
+  "total_score": 15,
+  "evaluator_notes": null
+}

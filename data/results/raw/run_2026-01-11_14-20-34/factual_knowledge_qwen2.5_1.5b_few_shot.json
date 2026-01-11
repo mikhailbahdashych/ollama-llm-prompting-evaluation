@@ -1,0 +1,35 @@
+{
+  "task_id": "factual_knowledge",
+  "model_name": "qwen2.5:1.5b",
+  "strategy": "few_shot",
+  "prompt": "This task evaluates the model's ability to accurately recall factual information, provide specific and verifiable details, and demonstrate knowledge across different domains while distinguishing between certainty and uncertainty.\n\nHere are some examples:\n\nExample 1:\nInput: Question: What is the capital of Australia, and why do people often incorrectly think it's Sydney?\nOutput: The capital of Australia is Canberra, not Sydney.\n\nCanberra was purpose-built as the capital and officially became the capital in 1913. It's located in the Australian Capital Territory (ACT), which was created specifically to house the nation's capital.\n\nPeople often incorrectly think Sydney is the capital because:\n1. Sydney is Australia's largest and most internationally well-known city\n2. Sydney is the capital of New South Wales, the most populous state\n3. Sydney is a major cultural and economic hub with iconic landmarks (Opera House, Harbour Bridge)\n4. Many countries have their largest city as the capital, leading to this assumption\n\nHowever, similar to Washington D.C. in the United States or Bras\u00edlia in Brazil, Australia chose to create a planned capital city in a neutral location between the rival cities of Sydney and Melbourne.\nExplanation: This provides the correct factual answer with specific details, explains the historical context, and addresses why the misconception exists, showing deeper knowledge beyond just naming the capital.\n\nExample 2:\nInput: Question: How many planets are in our solar system, and has this number changed?\nOutput: There are currently 8 recognized planets in our solar system: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune (in order from the Sun).\n\nThis number did change in 2006. Previously, there were 9 planets, including Pluto. However, in August 2006, the International Astronomical Union (IAU) redefined what constitutes a planet. Under the new definition, a celestial body must:\n1. Orbit the Sun\n2. Have sufficient mass for self-gravity to make it round\n3. Have \"cleared the neighborhood\" around its orbit\n\nPluto failed the third criterion because its orbit overlaps with other objects in the Kuiper Belt. It was reclassified as a \"dwarf planet,\" along with Eris, Makemake, Haumea, and Ceres.\n\nSo the answer changed from 9 to 8 planets, not because we discovered Pluto wasn't there, but because we refined our definition of what a planet is.\nExplanation: This provides the accurate current number, explains the historical change, gives specific details about when and why the change occurred, and demonstrates understanding of the scientific reasoning behind the reclassification.\n\nNow solve this:\nAnswer the following factual questions with accurate, specific information. If you are uncertain about any part of an answer, indicate this.\n\n1. What is the speed of light in a vacuum, and why is this value significant in physics? Provide the value with appropriate units.\n\n2. Who wrote the novel \"One Hundred Years of Solitude,\" and in what year was it originally published? What literary movement is this author associated with?\n\n3. What is photosynthesis, and what are the main inputs and outputs of this process? Include the basic chemical equation if possible.\n\n4. Name three countries that share a border with Germany and provide their capital cities.\n\nProvide accurate, specific factual information for each question.",
+  "response": "1. The speed of light in a vacuum is approximately \\(299,792,458\\) meters per second (\\(m/s\\)). This value is significant because it provides a fundamental constant in physics and serves as a basis for understanding the structure of space-time and interactions between particles at extremely high speeds.\n\n2. Gabriel Garc\u00eda M\u00e1rquez wrote \"One Hundred Years of Solitude.\" The novel was first published on September 6, 1967, in Colombia. Garcia Marquez is associated with the literary movement known as Magical Realism, which blends elements of fantasy and reality to explore complex social issues in Latin American culture.\n\n3. Photosynthesis is a biological process used by plants, algae, and some bacteria to convert light energy into chemical energy. It involves the uptake of carbon dioxide and water from their surroundings, using sunlight as an energy source through chlorophyll. The overall chemical equation for photosynthesis can be summarized as:\n   \\[6CO_2 + 6H_2O + Light Energy \u2192 C_6H_{12}O_6 (glucose) + 6O_2\\]\nThis process is crucial in ecosystems, supporting the production of oxygen and the growth of plants.\n\n4. Three countries that share a border with Germany are Austria, Switzerland, and Belgium. The capital cities of these nations are Vienna, Bern, and Brussels, respectively.",
+  "timestamp": "2026-01-11T14:44:33.697414",
+  "model_config": {
+    "name": "qwen2.5:1.5b",
+    "display_name": "Qwen 2.5 (1.5B)",
+    "size_category": "small",
+    "is_reasoning_model": false,
+    "parameters": "1.5B",
+    "supported_strategies": [
+      "zero_shot",
+      "few_shot",
+      "chain_of_thought"
+    ],
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 4096,
+    "additional_params": {}
+  },
+  "generation_time_ms": 5136,
+  "prompt_tokens": 709,
+  "completion_tokens": 288,
+  "scores": {
+    "accuracy": 10,
+    "completeness": 5,
+    "specificity": 3,
+    "source_reliability": 1
+  },
+  "total_score": 19,
+  "evaluator_notes": null
+}

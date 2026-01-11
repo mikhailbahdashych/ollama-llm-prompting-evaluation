@@ -1,0 +1,35 @@
+{
+  "task_id": "math_solving",
+  "model_name": "qwen2.5:1.5b",
+  "strategy": "chain_of_thought",
+  "prompt": "This task evaluates the model's ability to solve mathematical problems using appropriate methods, show clear step-by-step work, explain mathematical reasoning, and arrive at correct numerical answers.\n\nSolve the following math problems. Show all your work and explain your reasoning for each step.\n\nProblem 1: Sarah is planning a rectangular garden. The length is 3 meters more than twice the width. If the perimeter of the garden is 36 meters, what are the dimensions (length and width) of the garden?\n\nProblem 2: A store is having a sale. A jacket originally costs $120. First, it's discounted by 25%, and then an additional 10% is taken off the sale price. What is the final price of the jacket?\n\nProblem 3: If f(x) = 2x\u00b2 - 5x + 3, find f(4). Show your substitution and calculation steps.\n\nSolve all three problems with clear step-by-step work.\n\nLet's approach this step by step:\n1. First, analyze the problem carefully\n2. Then, work through it systematically\n3. Finally, provide your answer\n\nPlease show your reasoning at each step.",
+  "response": "### Problem 1: Sarah's Garden Dimensions\n\n**Step 1:** Let \\( w \\) be the width of the garden in meters.\n\nGiven:\n- The length is \\( 3 + 2w \\) meters.\n- The perimeter \\( P = 36 \\) meters.\n\nThe formula for the perimeter of a rectangle is:\n\\[ P = 2l + 2w \\]\n\nSubstitute given values:\n\\[ 36 = 2(3w + 3) + 2w \\]\n\\[ 36 = 6w + 6 + 2w \\]\n\\[ 36 = 8w + 6 \\]\n\n**Step 2:** Solve for \\( w \\):\nSubtract 6 from both sides:\n\\[ 30 = 8w \\]\nDivide by 8:\n\\[ w = 3.75 \\text{ meters} \\]\n\n**Step 3:** Calculate the length using \\( l = 3 + 2w \\):\n\\[ l = 3 + 2(3.75) \\]\n\\[ l = 3 + 7.5 \\]\n\\[ l = 10.5 \\text{ meters} \\]\n\n**Answer:**\nThe dimensions of Sarah's garden are:\n- Width (\\( w \\)): 3.75 meters\n- Length (\\( l \\)): 10.5 meters\n\n### Problem 2: Jacket Discounted Price\n\n**Step 1:** Start with the original price of $120.\n\n**Step 2:** Calculate the first discount (25% off):\n\\[ 120 \\times (1 - 0.25) = 120 \\times 0.75 \\]\n\\[ 90 \\]\n\n**Step 3:** Apply the additional 10% discount on the new price:\n\\[ 90 \\times (1 - 0.10) = 90 \\times 0.90 \\]\n\\[ 81 \\]\n\n**Answer:**\nThe final price of the jacket is $81.\n\n### Problem 3: f(4)\n\nGiven \\( f(x) = 2x^2 - 5x + 3 \\), substitute \\( x = 4 \\):\n\n**Step 1:** Calculate \\( x^2 \\):\n\\[ (4)^2 = 16 \\]\n\n**Step 2:** Multiply by the coefficient of \\( x \\) (which is -5):\n\\[ 16 \\times (-5) = -80 \\]\n\n**Step 3:** Add this to the constant term:\n\\[ -80 + 3 = -77 \\]\n\n**Answer:**\nThe value of \\( f(4) \\) is **-77**.",
+  "timestamp": "2026-01-11T14:46:21.039687",
+  "model_config": {
+    "name": "qwen2.5:1.5b",
+    "display_name": "Qwen 2.5 (1.5B)",
+    "size_category": "small",
+    "is_reasoning_model": false,
+    "parameters": "1.5B",
+    "supported_strategies": [
+      "zero_shot",
+      "few_shot",
+      "chain_of_thought"
+    ],
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 4096,
+    "additional_params": {}
+  },
+  "generation_time_ms": 9226,
+  "prompt_tokens": 270,
+  "completion_tokens": 575,
+  "scores": {
+    "correctness": 3,
+    "methodology": 2,
+    "step_clarity": 3,
+    "explanation": 1
+  },
+  "total_score": 9,
+  "evaluator_notes": null
+}

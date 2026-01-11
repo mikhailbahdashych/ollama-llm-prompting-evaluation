@@ -56,7 +56,7 @@ MODELS: Dict[str, ModelConfig] = {
         is_reasoning_model=False,
         parameters="1.5B",
         supported_strategies=["zero_shot", "few_shot", "chain_of_thought"],
-        max_tokens=4096  # Sufficient for complete code responses
+        max_tokens=-1  # Unlimited tokens - let the model generate full response
     ),
     "large": ModelConfig(
         name="deepseek-r1:7b",

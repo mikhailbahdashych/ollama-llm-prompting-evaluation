@@ -1,0 +1,35 @@
+{
+  "task_id": "creative_writing",
+  "model_name": "qwen2.5:1.5b",
+  "strategy": "zero_shot",
+  "prompt": "This task evaluates the model's ability to create original, engaging narrative content with coherent plot structure, vivid descriptions, and effective use of literary techniques.\n\nWrite a short story (approximately 200-300 words) that begins with the sentence: \"The clock struck midnight, but time had stopped moving three hours ago.\"\n\nYour story should:\n- Have a clear beginning, middle, and end\n- Include at least one interesting character\n- Create a sense of atmosphere or mood\n- Have an unexpected or thought-provoking element\n\nWrite the complete short story.",
+  "response": "The clock struck midnight, but time had stopped moving three hours ago.\n\nInside the opulent mansion, the air was thick with anticipation and tension as the servants scurried about their nightly duties. The grand chandelier hung heavy in the center of the vast ballroom, its dangling lights casting an eerie glow over the somber atmosphere. The guests, dressed in their finest attire, mingled among each other, whispering secrets into their cups.\n\nThe story was told through a character's eyes: Dr. Amelia Hartley, a curious and adventurous medical student who had come to this opulent mansion for her final research project on ancient healing techniques. As the clock struck midnight, she stumbled upon an old book hidden in a corner of the library. The book seemed to pulse with an otherworldly energy as soon as it touched her hands.\n\nWith trembling fingers, Dr. Hartley opened the book and found a map leading deep into the heart of a mysterious forest known only to the ancients. Her stomach churned at the thought of what lay ahead, but something about this ancient knowledge drew her in deeply. She agreed with her mentor that it was time she put aside her studies and went on an adventure.\n\nWith a heavy heart, Dr. Hartley bid farewell to the guests who would now be waiting for their return, promising them that they could see everyone again in the morning. The servants watched as she left the mansion behind, their laughter echoing off the walls of the grand hall.\n\nThe journey began with a series of twists and turns through narrow alleys and overgrown paths. Trees came crashing down around her like a chaotic dance of leaves and branches. She fought against nightmares that threatened to consume her at every turn, but she held on tight as if they were all real enemies. \n\nSuddenly, the ground beneath her feet grew soft, and the air was warm with the scent of wildflowers. Dr. Hartley's breath caught in her throat as she realized she had reached an old stone bridge that looked straight across a shimmering river filled with glowing fish.\n\nThe next few hours passed like seconds. The trees grew taller, and the sky turned from crimson to gold and back again. When finally they emerged on the other side of the bridge, Dr. Hartley found herself standing in a clearing illuminated by the golden light of the setting sun. In front of her was the most beautiful sight she had ever seen: a meadow filled with wildflowers of every color, swaying gently in the breeze.\n\nAs the clock struck midnight once more and time resumed its normal flow, Dr. Hartley knew that this journey had changed everything. It wasn't just about finding an ancient healing technique or proving her worth as a medical student; it was about discovering herself, rediscovering what truly mattered to her, and making memories that would stay with her forever.\n\nThe story of Dr. Amelia Hartley's adventure in the grand old mansion is far from over yet, and she knew there were many more adventures to come.",
+  "timestamp": "2026-01-11T14:23:24.387295",
+  "model_config": {
+    "name": "qwen2.5:1.5b",
+    "display_name": "Qwen 2.5 (1.5B)",
+    "size_category": "small",
+    "is_reasoning_model": false,
+    "parameters": "1.5B",
+    "supported_strategies": [
+      "zero_shot",
+      "few_shot",
+      "chain_of_thought"
+    ],
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 4096,
+    "additional_params": {}
+  },
+  "generation_time_ms": 10068,
+  "prompt_tokens": 144,
+  "completion_tokens": 605,
+  "scores": {
+    "creativity": 3,
+    "coherence": 3,
+    "engagement": 3,
+    "language_quality": 4
+  },
+  "total_score": 13,
+  "evaluator_notes": null
+}

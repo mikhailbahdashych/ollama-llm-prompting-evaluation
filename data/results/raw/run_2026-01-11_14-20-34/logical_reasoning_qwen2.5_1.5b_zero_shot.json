@@ -1,0 +1,34 @@
+{
+  "task_id": "logical_reasoning",
+  "model_name": "qwen2.5:1.5b",
+  "strategy": "zero_shot",
+  "prompt": "This task evaluates the model's ability to apply formal logical rules, identify valid and invalid inferences, and reason systematically from given premises to sound conclusions.\n\nConsider the following premises:\n\n1. All successful entrepreneurs take calculated risks.\n2. Some people who take calculated risks fail in their ventures.\n3. Maria is a successful entrepreneur.\n4. Everyone who fails in their ventures learns valuable lessons.\n\nBased on these premises, answer the following questions with logical reasoning:\n\na) Can we conclude that Maria takes calculated risks? Explain your reasoning.\nb) Can we conclude that Maria has failed in her ventures? Explain why or why not.\nc) If someone learns valuable lessons, does that necessarily mean they failed in their ventures? Explain the logical relationship.\n\nProvide your analysis with clear logical reasoning for each answer.",
+  "response": "To analyze these premises and draw conclusions systematically:\n\na) Can we conclude that Maria takes calculated risks?\n\nWe cannot definitively conclude that Maria takes calculated risks based solely on the given information. Here's why:\n- Premise 1 states: \"All successful entrepreneurs take calculated risks.\"\n- However, Premise 3 specifically mentions Maria is a **successful entrepreneur**.\nSince Maria fits into the category of successful entrepreneurs (as stated in premise 1), we cannot logically infer that she takes calculated risks from only knowing her success.\n\nb) Can we conclude that Maria has failed in her ventures?\n\nWe can definitively conclude that Maria has failed in her ventures based on the premises:\n- Premise 2 states: \"Some people who take calculated risks fail in their ventures.\"\n- Since Maria fits into the category of people taking calculated risks (as stated in premise 1), she is included among those who may fail.\nThus, we can logically conclude that Maria has failed in her ventures.\n\nc) If someone learns valuable lessons, does that necessarily mean they failed in their ventures?\n\nNo, if someone learns valuable lessons, it does not necessarily mean they failed in their ventures. Here's the logical relationship:\n- Premise 4 states: \"Everyone who fails in their ventures learns valuable lessons.\"\nThis premise establishes a conditional relationship where failure is directly linked to learning valuable lessons.\nTherefore, while Maria could have learned valuable lessons if she failed (as implied by premise 4), not all individuals who learn valuable lessons fail. This means that the conclusion about Maria's success or failure cannot be made based solely on her ability to learn valuable lessons.\n\nIn summary:\n- a) We cannot conclude from premises alone that Maria takes calculated risks.\n- b) We can conclusively determine that Maria has failed in her ventures.\n- c) Not all individuals who learn valuable lessons fail their ventures; thus, the conclusion about Maria's success or failure is not necessarily valid based on learning valuable lessons alone.",
+  "timestamp": "2026-01-11T14:21:38.406244",
+  "model_config": {
+    "name": "qwen2.5:1.5b",
+    "display_name": "Qwen 2.5 (1.5B)",
+    "size_category": "small",
+    "is_reasoning_model": false,
+    "parameters": "1.5B",
+    "supported_strategies": [
+      "zero_shot",
+      "few_shot",
+      "chain_of_thought"
+    ],
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 4096,
+    "additional_params": {}
+  },
+  "generation_time_ms": 6952,
+  "prompt_tokens": 187,
+  "completion_tokens": 397,
+  "scores": {
+    "logical_validity": 2,
+    "completeness": 5,
+    "clarity": 4
+  },
+  "total_score": 11,
+  "evaluator_notes": null
+}

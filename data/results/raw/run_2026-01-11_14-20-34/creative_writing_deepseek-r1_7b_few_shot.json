@@ -1,0 +1,34 @@
+{
+  "task_id": "creative_writing",
+  "model_name": "deepseek-r1:7b",
+  "strategy": "few_shot",
+  "prompt": "This task evaluates the model's ability to create original, engaging narrative content with coherent plot structure, vivid descriptions, and effective use of literary techniques.\n\nHere are some examples:\n\nExample 1:\nInput: Write a brief scene (100-150 words) about a musician discovering an old instrument in an attic. Include sensory details.\nOutput: The attic smelled of dust and forgotten memories as Sarah climbed the creaking wooden stairs. Sunlight streamed through a grimy window, illuminating motes dancing in the air. In the corner, beneath a moth-eaten blanket, something gleamed.\n\nShe uncovered it slowly\u2014a violin, its wood the color of aged honey. The strings were slack, but the craftsmanship was extraordinary. Sarah's fingers trembled as she picked it up. The wood was cool and smooth, marked with tiny scratches that spoke of decades of use.\n\nWhen she drew the bow across the strings, even out of tune, the sound that emerged was hauntingly beautiful. It was as if the instrument had been waiting, patient through the years, for someone to awaken its voice again.\nExplanation: This example demonstrates vivid sensory details (smell, sight, touch, sound), creates atmosphere, develops character through action and emotion, and has a complete narrative arc with a satisfying resolution.\n\nExample 2:\nInput: Write a two-paragraph story about someone finding an unexpected message. Make it intriguing.\nOutput: The message was written in the steam on her bathroom mirror: \"Remember what you forgot.\" Emma stared at the words, her heart pounding. She lived alone, and the apartment had been empty all day. The condensation from her shower couldn't have done this\u2014she hadn't showered yet.\n\nAs she reached out to touch the mirror, her finger met not glass but paper. The mirror was a photograph, one she'd taken three years ago of this exact bathroom. And in the reflection behind her photographic self, barely visible in the steam, was a figure she'd never noticed before. Someone who had always been there, waiting to be seen.\nExplanation: This creates mystery and suspense, uses an unexpected twist, builds tension effectively, and leaves the reader intrigued. It demonstrates strong narrative control in a very short space.\n\nNow solve this:\nWrite a short story (approximately 200-300 words) that begins with the sentence: \"The clock struck midnight, but time had stopped moving three hours ago.\"\n\nYour story should:\n- Have a clear beginning, middle, and end\n- Include at least one interesting character\n- Create a sense of atmosphere or mood\n- Have an unexpected or thought-provoking element\n\nWrite the complete short story.",
+  "response": "**The Clock Struck Midnight**\n\nThe clock struck midnight, but time had stopped moving three hours ago. The small town of Maplewood was eerily quiet, save for the faint creak of old wooden furniture and the distant hum of distant voices. Amidst the chaos, Clara, a seasoned bookseller at the local shop, noticed something peculiar. She had heard rumors of strange occurrences since midnight, but this was beyond her expectations.\n\nAs she stepped into her father's old workshop, the cold air of the basement greeted her. Dust motes floated in the dim light filtering through the cracks in the ceiling, casting an eerie glow. Her hands trembled as she pushed open the dusty crate hidden behind a stack of old photographs. Inside lay a photograph of a baby girl, her eyes glowing with life despite its age.\n\nClara's heart raced as she flipped through the pages, each image taking her back to the summer when their family had gathered for a picnic on the outskirts of town. The photo belonged to Emily Carter, taken three hours before midnight when time stopped. Clara hesitated at the thought of revisiting that night, but curiosity\u6218\u80dced her fear.\n\nShe discovered more than just the photograph\u2014a letter and some cryptic notes. The letter revealed that Emily Carter had been born exactly three hours before midnight, when time had halted. The baby girl had never existed in a world where their parents' actions\u2014decayed friendships and secret alliances\u2014had cost them their lives.\n\nClara's mind raced as she pondered the implications. The truth was too much to bear, and the cold silence of the basement loomed large with unanswered questions. She realized that Emily Carter was alive because time had moved again, but her parents' actions had left a trail of guilt and regret.\n\nAs Clara faced the consequences of their ancestors' deeds, she felt a weight settle over her. The baby girl's memory was a dagger piercing through her heart, forcing her to confront the moral choices her family had made. With every breath, she knew the truth was inevitable, and she would have to face it alone.\n\nIn the dim light of the basement, Clara's reflection seemed to acknowledge her fears. The clock struck once more, but time moved on, leaving her with the weight of what had been lost. She closed the crate, knowing that the past could not be erased, only faced.\n\nAnd so, Clara began her journey into the unknown, determined to make sense of a world that had rewritten its story three hours before midnight. The clock struck again, but time moved on, and Clara's heart was forever changed by the baby girl's memory.",
+  "timestamp": "2026-01-11T14:26:00.892039",
+  "model_config": {
+    "name": "deepseek-r1:7b",
+    "display_name": "DeepSeek R1 (7B)",
+    "size_category": "large",
+    "is_reasoning_model": true,
+    "parameters": "7B",
+    "supported_strategies": [
+      "zero_shot",
+      "few_shot"
+    ],
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": -1,
+    "additional_params": {}
+  },
+  "generation_time_ms": 53884,
+  "prompt_tokens": 545,
+  "completion_tokens": 1239,
+  "scores": {
+    "creativity": 3,
+    "coherence": 3,
+    "engagement": 3,
+    "language_quality": 3
+  },
+  "total_score": 12,
+  "evaluator_notes": null
+}

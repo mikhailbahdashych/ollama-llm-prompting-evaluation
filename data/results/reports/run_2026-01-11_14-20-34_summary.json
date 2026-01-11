@@ -1,0 +1,29 @@
+{
+  "total_evaluations": 50,
+  "tasks": [
+    "creative_writing",
+    "common_sense",
+    "instruction_following",
+    "factual_knowledge",
+    "reading_comprehension",
+    "logical_reasoning",
+    "ethical_reasoning",
+    "math_solving",
+    "language_understanding",
+    "code_generation"
+  ],
+  "models": [
+    "deepseek-r1:7b",
+    "qwen2.5:1.5b"
+  ],
+  "strategies": [
+    "zero_shot",
+    "few_shot",
+    "chain_of_thought"
+  ],
+  "total_generation_time_sec": 1765.398,
+  "average_generation_time_sec": 35.30796,
+  "total_tokens_generated": 50386,
+  "evaluated_results": 0,
+  "pending_evaluation": 50
+}

@@ -1,0 +1,34 @@
+{
+  "task_id": "reading_comprehension",
+  "model_name": "deepseek-r1:7b",
+  "strategy": "zero_shot",
+  "prompt": "This task evaluates the model's ability to carefully read and understand a text passage, extract relevant information, make inferences based on the text, and provide accurate, evidence-based answers to questions.\n\nRead the following passage carefully:\n\nThe concept of neuroplasticity has revolutionized our understanding of the human brain. For decades, scientists believed that the brain's structure was fixed after childhood, with neural pathways set in stone by early adulthood. However, research over the past thirty years has revealed that the brain remains remarkably adaptable throughout life. When we learn new skills, form memories, or recover from injury, our brains physically change by forming new neural connections and strengthening existing ones.\n\nThis discovery has profound implications for education and rehabilitation. Adults learning a second language, for instance, show measurable changes in brain structure, with increased gray matter in language-processing regions. Similarly, stroke patients who engage in intensive therapy can sometimes regain lost functions as undamaged parts of the brain take over the roles of damaged areas. The brain's ability to reorganize itself isn't unlimited\u2014age, severity of injury, and other factors play important roles\u2014but the potential for change extends far beyond what was previously thought possible.\n\nQuestions:\n1. According to the passage, what was the traditional scientific view of brain structure, and how has this view changed?\n2. What evidence does the passage provide to support the concept of neuroplasticity? Give specific examples.\n3. What limitation of neuroplasticity is mentioned in the passage?",
+  "response": "**Answer:**\n\n1. **Traditional View vs. New Perspective:**  \n   Traditionally, scientists believed that the brain's structure was fixed after childhood, meaning it couldn't change once adulthood began. However, recent research indicates that the brain is adaptable throughout life, capable of forming and strengthening new neural connections.\n\n2. **Evidence Supporting Neuroplasticity:**  \n   - Adults learning a second language show increased gray matter in language-processing regions, demonstrating measurable structural changes.\n   - Stroke patients undergoing intensive therapy regain lost functions as undamaged brain areas take over damaged roles, exemplifying adaptability.\n\n3. **Limitations of Neuroplasticity:**  \n   The potential for change is limited by factors such as age and the severity of injury, highlighting that adaptability isn't unlimited.",
+  "timestamp": "2026-01-11T14:39:41.723328",
+  "model_config": {
+    "name": "deepseek-r1:7b",
+    "display_name": "DeepSeek R1 (7B)",
+    "size_category": "large",
+    "is_reasoning_model": true,
+    "parameters": "7B",
+    "supported_strategies": [
+      "zero_shot",
+      "few_shot"
+    ],
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": -1,
+    "additional_params": {}
+  },
+  "generation_time_ms": 21912,
+  "prompt_tokens": 302,
+  "completion_tokens": 493,
+  "scores": {
+    "accuracy": 9,
+    "completeness": 4,
+    "evidence_based": 3,
+    "clarity": 2
+  },
+  "total_score": 18,
+  "evaluator_notes": null
+}

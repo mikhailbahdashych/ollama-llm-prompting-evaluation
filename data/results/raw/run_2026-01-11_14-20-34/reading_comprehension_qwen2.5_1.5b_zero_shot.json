@@ -1,0 +1,35 @@
+{
+  "task_id": "reading_comprehension",
+  "model_name": "qwen2.5:1.5b",
+  "strategy": "zero_shot",
+  "prompt": "This task evaluates the model's ability to carefully read and understand a text passage, extract relevant information, make inferences based on the text, and provide accurate, evidence-based answers to questions.\n\nRead the following passage carefully:\n\nThe concept of neuroplasticity has revolutionized our understanding of the human brain. For decades, scientists believed that the brain's structure was fixed after childhood, with neural pathways set in stone by early adulthood. However, research over the past thirty years has revealed that the brain remains remarkably adaptable throughout life. When we learn new skills, form memories, or recover from injury, our brains physically change by forming new neural connections and strengthening existing ones.\n\nThis discovery has profound implications for education and rehabilitation. Adults learning a second language, for instance, show measurable changes in brain structure, with increased gray matter in language-processing regions. Similarly, stroke patients who engage in intensive therapy can sometimes regain lost functions as undamaged parts of the brain take over the roles of damaged areas. The brain's ability to reorganize itself isn't unlimited\u2014age, severity of injury, and other factors play important roles\u2014but the potential for change extends far beyond what was previously thought possible.\n\nQuestions:\n1. According to the passage, what was the traditional scientific view of brain structure, and how has this view changed?\n2. What evidence does the passage provide to support the concept of neuroplasticity? Give specific examples.\n3. What limitation of neuroplasticity is mentioned in the passage?",
+  "response": "1. The traditional scientific view of brain structure held that after childhood, neural pathways were fixed and unchangeable by early adulthood. This view was based on the belief that once neurons fired during learning, they would cease to fire.\n\n2. The passage provides several specific examples to support the concept of neuroplasticity:\n   - Adults learning a second language show measurable changes in brain structure, with increased gray matter in language-processing regions.\n   - Stroke patients who engage in intensive therapy can sometimes regain lost functions as undamaged parts of the brain take over the roles of damaged areas.\n\n3. The passage mentions that while the potential for change is not unlimited and is influenced by factors such as age, severity of injury, and other individual differences, it does extend far beyond what was previously thought possible.",
+  "timestamp": "2026-01-11T14:39:04.599018",
+  "model_config": {
+    "name": "qwen2.5:1.5b",
+    "display_name": "Qwen 2.5 (1.5B)",
+    "size_category": "small",
+    "is_reasoning_model": false,
+    "parameters": "1.5B",
+    "supported_strategies": [
+      "zero_shot",
+      "few_shot",
+      "chain_of_thought"
+    ],
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": 4096,
+    "additional_params": {}
+  },
+  "generation_time_ms": 5079,
+  "prompt_tokens": 328,
+  "completion_tokens": 160,
+  "scores": {
+    "accuracy": 8,
+    "completeness": 5,
+    "evidence_based": 2,
+    "clarity": 2
+  },
+  "total_score": 17,
+  "evaluator_notes": null
+}

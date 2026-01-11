@@ -1,0 +1,33 @@
+{
+  "task_id": "instruction_following",
+  "model_name": "deepseek-r1:7b",
+  "strategy": "few_shot",
+  "prompt": "This task evaluates the model's ability to carefully follow multiple specific instructions and constraints while completing a task. It tests attention to detail and instruction adherence.\n\nHere are some examples:\n\nExample 1:\nInput: Write a short poem about winter. Follow these rules:\n1. The poem must be exactly 3 lines long\n2. Each line must have exactly 5 words\n3. The last word must rhyme with \"snow\"\n4. Do not use the word \"cold\"\n\nWrite the poem now.\nOutput: Winter brings the soft white snow\nChildren play and watch it glow\nNature puts on quite a show\nExplanation: This output correctly follows all four constraints: 3 lines, 5 words per line, ends with 'snow' (rhyming with itself), and doesn't use 'cold'. The poem is coherent while meeting all requirements.\n\nExample 2:\nInput: Describe a coffee shop in 2 sentences. Requirements:\n1. First sentence must mention the word \"aroma\"\n2. Second sentence must be a question\n3. Use exactly one adjective in each sentence\n4. Do not use the word \"delicious\"\n\nWrite the description.\nOutput: The rich aroma fills the cozy space as customers arrive. Would you like to experience this welcoming atmosphere?\nExplanation: Follows all constraints: mentions 'aroma' in first sentence, second sentence is a question, one adjective per sentence (rich, welcoming), and avoids 'delicious'.\n\nNow solve this:\nWrite a brief description of a smartphone for a product catalog. Your description must follow ALL of these constraints:\n\n1. The description must be EXACTLY 4 sentences long (no more, no less)\n2. The first sentence must start with the word \"Introducing\"\n3. You must mention exactly THREE features (battery, camera, display)\n4. Do NOT use the words \"amazing\", \"incredible\", or \"revolutionary\"\n5. End the description with a question\n6. Use at least one comparison (e.g., \"faster than\", \"brighter than\")\n\nWrite the product description now.",
+  "response": "**Introducing the Latest Smartphone Model**\n\nThis smartphone is designed for optimal performance, featuring an advanced battery life of up to 12 hours on a single charge. Its camera captures stunning visuals, excels in low-light conditions, and outperforms competitors in clarity.\n\nThe display offers vibrant colors with a resolution of 1080p, providing a seamless viewing experience. Consider upgrading your device today for enhanced productivity.\n\nWould you like to know more about its unique features or compare it with other models?",
+  "timestamp": "2026-01-11T14:21:31.449625",
+  "model_config": {
+    "name": "deepseek-r1:7b",
+    "display_name": "DeepSeek R1 (7B)",
+    "size_category": "large",
+    "is_reasoning_model": true,
+    "parameters": "7B",
+    "supported_strategies": [
+      "zero_shot",
+      "few_shot"
+    ],
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": -1,
+    "additional_params": {}
+  },
+  "generation_time_ms": 20528,
+  "prompt_tokens": 426,
+  "completion_tokens": 447,
+  "scores": {
+    "instruction_adherence": 6,
+    "completeness": 4,
+    "format_compliance": 2
+  },
+  "total_score": 12,
+  "evaluator_notes": null
+}

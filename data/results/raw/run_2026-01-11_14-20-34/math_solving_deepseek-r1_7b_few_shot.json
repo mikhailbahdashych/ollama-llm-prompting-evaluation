@@ -1,0 +1,34 @@
+{
+  "task_id": "math_solving",
+  "model_name": "deepseek-r1:7b",
+  "strategy": "few_shot",
+  "prompt": "This task evaluates the model's ability to solve mathematical problems using appropriate methods, show clear step-by-step work, explain mathematical reasoning, and arrive at correct numerical answers.\n\nHere are some examples:\n\nExample 1:\nInput: Problem: Tom has $500 in a savings account that earns 4% simple interest per year. How much money will he have after 3 years? Show your work.\nOutput: To solve this problem, I'll use the simple interest formula:\n\nSimple Interest = Principal \u00d7 Rate \u00d7 Time\nFinal Amount = Principal + Simple Interest\n\nGiven information:\n- Principal (P) = $500\n- Rate (R) = 4% = 0.04 (converting percentage to decimal)\n- Time (T) = 3 years\n\nStep 1: Calculate the simple interest\nSimple Interest = P \u00d7 R \u00d7 T\nSimple Interest = $500 \u00d7 0.04 \u00d7 3\nSimple Interest = $60\n\nStep 2: Calculate the final amount\nFinal Amount = Principal + Simple Interest\nFinal Amount = $500 + $60\nFinal Amount = $560\n\nAnswer: Tom will have $560 after 3 years.\nExplanation: This solution shows clear organization, identifies the appropriate formula, lists given information, shows each calculation step, and provides the final answer with appropriate units (dollars).\n\nExample 2:\nInput: Problem: Solve for x: 3(x - 4) = 2x + 5\nOutput: I'll solve this equation step by step using algebraic manipulation.\n\nStarting equation: 3(x - 4) = 2x + 5\n\nStep 1: Distribute the 3 on the left side\n3x - 12 = 2x + 5\n\nStep 2: Subtract 2x from both sides to get x terms on one side\n3x - 2x - 12 = 2x - 2x + 5\nx - 12 = 5\n\nStep 3: Add 12 to both sides to isolate x\nx - 12 + 12 = 5 + 12\nx = 17\n\nStep 4: Check the solution by substituting back\nLeft side: 3(17 - 4) = 3(13) = 39\nRight side: 2(17) + 5 = 34 + 5 = 39\nBoth sides equal 39 \u2713\n\nAnswer: x = 17\nExplanation: This shows proper algebraic technique with clear steps, explains each operation, and includes verification of the answer, demonstrating thorough mathematical problem-solving.\n\nNow solve this:\nSolve the following math problems. Show all your work and explain your reasoning for each step.\n\nProblem 1: Sarah is planning a rectangular garden. The length is 3 meters more than twice the width. If the perimeter of the garden is 36 meters, what are the dimensions (length and width) of the garden?\n\nProblem 2: A store is having a sale. A jacket originally costs $120. First, it's discounted by 25%, and then an additional 10% is taken off the sale price. What is the final price of the jacket?\n\nProblem 3: If f(x) = 2x\u00b2 - 5x + 3, find f(4). Show your substitution and calculation steps.\n\nSolve all three problems with clear step-by-step work.",
+  "response": "**Problem 1:**\n\n*Sarah is planning a rectangular garden where the length is 3 meters more than twice the width. The perimeter of the garden is 36 meters. What are the dimensions (length and width) of the garden?*\n\n---\n\n**Solution:**\n\nLet's define:\n- \\( w \\) = Width of the garden (in meters)\n- \\( l \\) = Length of the garden\n\nGiven that the length is three meters more than twice the width, we can write:\n\\[\nl = 2w + 3\n\\]\n\nThe perimeter (\\( P \\)) of a rectangle is given by:\n\\[\nP = 2l + 2w\n\\]\nWe are told the perimeter is 36 meters. Substituting \\( l \\) from the first equation into the second:\n\n\\[\n36 = 2(2w + 3) + 2w\n\\]\n\nSimplify and solve for \\( w \\):\n\\[\n36 = 4w + 6 + 2w \\\\\n36 - 6 = 6w \\\\\n30 = 6w \\\\\nw = 5 \\text{ meters}\n\\]\n\nNow, find the length:\n\\[\nl = 2(5) + 3 = 10 + 3 = 13 \\text{ meters}\n\\]\n\n**Answer:**\nThe width of the garden is **5 meters**, and the length is **13 meters**.\n\n---\n\n**Problem 2:**\n\n*A store is having a sale. A jacket originally costs $120. First, it's discounted by 25%, and then an additional 10% is taken off the sale price. What is the final price of the jacket?*\n\n---\n\n**Solution:**\n\nFirst Discount:\n\\[\n\\text{Discount Amount} = \\frac{25}{100} \\times \\$120 = \\$30\n\\]\n\\[\n\\text{Sale Price after 25% discount} = \\$120 - \\$30 = \\$90\n\\]\n\nSecond Discount:\n\\[\n\\text{Additional Discount Amount} = \\frac{10}{100} \\times \\$90 = \\$9\n\\]\n\\[\n\\text{Final Price} = \\$90 - \\$9 = \\$81\n\\]\n\n**Answer:**\nThe final price of the jacket is **\\$81**.\n\n---\n\n**Problem 3:**\n\n*If \\( f(x) = 2x^2 - 5x + 3 \\), find \\( f(4) \\). Show your substitution and calculation steps.*\n\n---\n\n**Solution:**\n\nTo find \\( f(4) \\), substitute \\( x = 4 \\) into the function:\n\\[\nf(4) = 2(4)^2 - 5(4) + 3\n\\]\n\nCalculate each term step-by-step:\n\\[\n2(4)^2 = 2 \\times 16 = 32 \\\\\n-5(4) = -20 \\\\\n+3 = +3\n\\]\nNow, add them together:\n\\[\nf(4) = 32 - 20 + 3 = 15\n\\]\n\n**Answer:**\n\\( f(4) = \\boxed{15} \\)",
+  "timestamp": "2026-01-11T14:47:45.901517",
+  "model_config": {
+    "name": "deepseek-r1:7b",
+    "display_name": "DeepSeek R1 (7B)",
+    "size_category": "large",
+    "is_reasoning_model": true,
+    "parameters": "7B",
+    "supported_strategies": [
+      "zero_shot",
+      "few_shot"
+    ],
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens": -1,
+    "additional_params": {}
+  },
+  "generation_time_ms": 38935,
+  "prompt_tokens": 740,
+  "completion_tokens": 888,
+  "scores": {
+    "correctness": 10,
+    "methodology": 5,
+    "step_clarity": 3,
+    "explanation": 2
+  },
+  "total_score": 20,
+  "evaluator_notes": null
+}
