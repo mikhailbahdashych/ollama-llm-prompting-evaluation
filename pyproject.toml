@@ -1,7 +1,21 @@
 [project]
 name = "ollama-llm-prompting-evaluation"
 version = "0.1.0"
-description = "Add your description here"
+description = "LLM evaluation system with diverse prompting strategies"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "requests>=2.31.0",
+    "rich>=13.7.0",
+    "pandas>=2.1.0",
+    "matplotlib>=3.10.8",
+    "seaborn>=0.13.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+]
