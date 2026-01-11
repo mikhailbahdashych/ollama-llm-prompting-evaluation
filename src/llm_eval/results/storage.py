@@ -77,25 +77,23 @@ class ResultsStorage:
         """
         self.base_path = Path(base_path)
         self.raw_dir = self.base_path / "raw"
-        self.scored_dir = self.base_path / "scored"
         self.reports_dir = self.base_path / "reports"
 
         # Create directories if they don't exist
         self.raw_dir.mkdir(parents=True, exist_ok=True)
-        self.scored_dir.mkdir(parents=True, exist_ok=True)
         self.reports_dir.mkdir(parents=True, exist_ok=True)
 
         logger.info(f"Results storage initialized at: {self.base_path}")
 
     def save_result(self, result: EvaluationResult, run_id: Optional[str] = None) -> Path:
-        """Save a single evaluation result as JSON.
+        """Save a single evaluation result as JSON and markdown.
 
         Args:
             result: The EvaluationResult to save
             run_id: Optional run identifier for organizing results
 
         Returns:
-            Path to the saved file
+            Path to the saved JSON file
         """
         # Generate run ID if not provided
         if run_id is None:
@@ -105,17 +103,23 @@ class ResultsStorage:
         run_dir = self.raw_dir / run_id
         run_dir.mkdir(exist_ok=True)
 
-        # Generate filename: {task_id}_{model}_{strategy}.json
+        # Generate base filename: {task_id}_{model}_{strategy}
         model_short = result.model_name.replace(":", "_").replace("/", "_")
-        filename = f"{result.task_id}_{model_short}_{result.strategy}.json"
-        filepath = run_dir / filename
+        base_filename = f"{result.task_id}_{model_short}_{result.strategy}"
 
-        # Save to file
-        with open(filepath, 'w') as f:
+        # Save JSON file
+        json_filepath = run_dir / f"{base_filename}.json"
+        with open(json_filepath, 'w') as f:
             f.write(result.to_json())
 
-        logger.debug(f"Saved result to: {filepath}")
-        return filepath
+        # Save markdown file with just the response
+        md_filepath = run_dir / f"{base_filename}_res.md"
+        with open(md_filepath, 'w') as f:
+            f.write(result.response)
+
+        logger.debug(f"Saved result to: {json_filepath}")
+        logger.debug(f"Saved response to: {md_filepath}")
+        return json_filepath
 
     def load_result(self, filepath: Path) -> Optional[EvaluationResult]:
         """Load a single result from JSON file.
