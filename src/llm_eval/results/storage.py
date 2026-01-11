@@ -249,9 +249,51 @@ class ResultsStorage:
 
         logger.info(f"Summary report saved to: {report_path}")
 
-        # Also export to CSV
-        csv_path = self.reports_dir / f"{run_id}_results.csv"
-        self.export_to_csv(csv_path, run_id=run_id)
+    def update_result(self, filepath: Path, result: EvaluationResult):
+        """Update a result file with new data.
+
+        Args:
+            filepath: Path to the JSON file to update
+            result: Updated EvaluationResult object
+        """
+        with open(filepath, 'w') as f:
+            f.write(result.to_json())
+        logger.debug(f"Updated result at: {filepath}")
+
+    def calculate_and_update_total_scores(self, run_id: str) -> int:
+        """Calculate total_score for all results with scores in a run.
+
+        This reads each JSON file, calculates total_score from scores dict,
+        and updates the file.
+
+        Args:
+            run_id: Run identifier
+
+        Returns:
+            Number of files updated
+        """
+        run_dir = self.raw_dir / run_id
+        if not run_dir.exists():
+            logger.error(f"Run directory not found: {run_dir}")
+            return 0
+
+        updated_count = 0
+        for filepath in run_dir.glob("*.json"):
+            result = self.load_result(filepath)
+            if result is None:
+                continue
+
+            # Calculate total_score if scores exist
+            if result.scores is not None:
+                result.total_score = sum(result.scores.values())
+                self.update_result(filepath, result)
+                updated_count += 1
+                logger.debug(
+                    f"Calculated total_score={result.total_score} for {filepath.name}"
+                )
+
+        logger.info(f"Updated total_score in {updated_count} files")
+        return updated_count
 
     def get_latest_run_id(self) -> Optional[str]:
         """Get the most recent run ID.
