@@ -14,6 +14,7 @@ A systematic framework for evaluating and comparing Large Language Models (LLMs)
   - [Step 2: Manual Scoring](#step-2-manual-scoring)
   - [Step 3: Generate Reports](#step-3-generate-reports)
   - [Step 4: Generate Visualizations](#step-4-generate-visualizations)
+- [Example Results](#example-results)
 - [Task Definitions](#task-definitions)
 - [Prompting Strategies](#prompting-strategies)
 - [Scripts Documentation](#scripts-documentation)
@@ -56,8 +57,7 @@ src/llm_eval/
 │   ├── registry.py    # Task loading and management
 │   └── definitions/   # Individual task implementations
 ├── prompts/           # Prompting strategy implementations
-│   ├── strategies.py  # ZeroShot, FewShot, ChainOfThought classes
-│   └── builders.py    # Prompt formatting utilities
+│   └── strategies.py  # ZeroShot, FewShot, ChainOfThought classes
 ├── models/            # Model configurations and API client
 │   ├── config.py      # Model definitions and parameters
 │   └── ollama_client.py  # Ollama HTTP API integration
@@ -266,6 +266,97 @@ This generates 10 visualization plots:
 10. Model Specialization - Relative performance heatmap
 
 **Output**: Plots saved to `data/results/reports/<run_id>_results_plots/`
+
+## Example Results
+
+This section presents actual results from an evaluation run conducted on January 11, 2026, demonstrating the framework's capabilities and output.
+
+### Run Overview
+
+**Run ID**: `run_2026-01-11_14-20-34`
+
+**Configuration**:
+- **Models Evaluated**: 2 (qwen2.5:1.5b, deepseek-r1:7b)
+- **Tasks**: 10 (all task categories)
+- **Strategies**: 3 (zero-shot, few-shot, chain-of-thought)
+- **Total Evaluations**: 50
+- **Total Generation Time**: 29.4 minutes (1765.4 seconds)
+- **Average Generation Time**: 35.3 seconds per evaluation
+- **Total Tokens Generated**: 50,386 tokens
+
+### Sample Results
+
+The table below shows a subset of evaluation results with human-scored performance:
+
+| Task | Model | Strategy | Total Score (max 20) |
+|------|-------|----------|---------------------|
+| code_generation | qwen2.5:1.5b | chain_of_thought | 20 |
+| code_generation | qwen2.5:1.5b | few_shot | 19 |
+| code_generation | qwen2.5:1.5b | zero_shot | 19 |
+| code_generation | deepseek-r1:7b | few_shot | 14 |
+| code_generation | deepseek-r1:7b | zero_shot | 12 |
+| common_sense | qwen2.5:1.5b | few_shot | 17 |
+| common_sense | deepseek-r1:7b | zero_shot | 14 |
+| common_sense | deepseek-r1:7b | few_shot | 13 |
+| common_sense | qwen2.5:1.5b | zero_shot | 12 |
+| common_sense | qwen2.5:1.5b | chain_of_thought | 6 |
+
+**Key Observations**:
+- The smaller qwen2.5:1.5b model excelled at code generation, achieving near-perfect scores
+- Different prompting strategies showed significant impact on performance
+- Model performance varied considerably across task types
+
+### Visualization Examples
+
+The complete run generated 10 visualization plots for comprehensive analysis. Selected examples are shown below:
+
+#### Overall Performance Comparison
+
+![Total Score by Model](data/results/reports/run_2026-01-11_14-20-34_results_plots/1_total_score_by_model.png)
+
+*Figure 1: Average performance comparison between models across all tasks and strategies*
+
+#### Task-Specific Performance
+
+![Performance by Task](data/results/reports/run_2026-01-11_14-20-34_results_plots/2_performance_by_task.png)
+
+*Figure 2: Grouped comparison showing how each model performs on different task types*
+
+#### Strategy Effectiveness
+
+![Performance by Strategy](data/results/reports/run_2026-01-11_14-20-34_results_plots/3_performance_by_strategy.png)
+
+*Figure 3: Comparison of zero-shot, few-shot, and chain-of-thought prompting effectiveness*
+
+#### Model-Task Fit Analysis
+
+![Performance Heatmap](data/results/reports/run_2026-01-11_14-20-34_results_plots/4_heatmap_model_task.png)
+
+*Figure 4: Heatmap showing which models excel at which tasks (darker colors indicate better performance)*
+
+![Radar Chart](data/results/reports/run_2026-01-11_14-20-34_results_plots/8_radar_chart_tasks.png)
+
+*Figure 5: Radar chart providing holistic view of model performance across all task categories*
+
+![Model Specialization](data/results/reports/run_2026-01-11_14-20-34_results_plots/10_model_specialization.png)
+
+*Figure 6: Relative performance heatmap showing each model's strengths (green) and weaknesses (red) compared to task averages*
+
+### Accessing the Full Results
+
+All results from this example run are available in the repository:
+
+- **Raw JSON Results**: `data/results/raw/run_2026-01-11_14-20-34/`
+  - 50 JSON files with complete evaluation data
+  - 50 companion markdown files with model responses
+- **CSV Report**: `data/results/reports/run_2026-01-11_14-20-34_results.csv`
+  - Complete dataset for statistical analysis
+- **Visualizations**: `data/results/reports/run_2026-01-11_14-20-34_results_plots/`
+  - All 10 plots in PNG format
+- **Summary Report**: `data/results/reports/run_2026-01-11_14-20-34_summary.json`
+  - Aggregate statistics and metadata
+
+These results demonstrate the framework's ability to systematically evaluate and compare LLM performance across diverse cognitive tasks, providing actionable insights for model selection and deployment decisions.
 
 ## Task Definitions
 
