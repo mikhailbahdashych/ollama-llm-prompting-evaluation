@@ -576,8 +576,7 @@ LAB5/
 │       ├── raw/         # JSON results by run
 │       └── reports/     # CSV reports and plots
 ├── pyproject.toml       # Project dependencies
-├── README.md           # This file
-└── CLAUDE.md          # Development documentation
+└── README.md           # This file
 ```
 
 ## Configuration
